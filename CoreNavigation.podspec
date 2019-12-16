@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
 	spec.summary = 'A Swift navigation framework'
 	spec.author = 'Aron Balog'
 	spec.homepage = 'https://github.com/aronbalog/CoreNavigation'
-	spec.source = { :git => 'https://github.com/aronbalog/CoreNavigation.git', :tag => spec.version }
+	spec.source = { :git => 'https://github.com/lotuslambda/CoreNavigation.git', :tag => spec.version }
 	spec.requires_arc = true
 	spec.source_files = 'CoreNavigation/**/*.{swift}'
 	spec.swift_versions = "5.1"
