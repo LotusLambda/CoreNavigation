@@ -17,6 +17,15 @@
 		3816F52124055C76007479B4 /* AnimatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52024055C76007479B4 /* AnimatedRequest.swift */; };
 		3816F52324055CBA007479B4 /* Request+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52224055CBA007479B4 /* Request+Animate.swift */; };
 		3816F525240570E5007479B4 /* Protectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F524240570E5007479B4 /* Protectable.swift */; };
+		3816F52D24057A91007479B4 /* Routing_RouteMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52724057A91007479B4 /* Routing_RouteMatch.swift */; };
+		3816F52E24057A91007479B4 /* Routing_Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52824057A91007479B4 /* Routing_Route.swift */; };
+		3816F53024057A91007479B4 /* Routing_RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52A24057A91007479B4 /* Routing_RegularExpression.swift */; };
+		3816F53124057A91007479B4 /* Routing_Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52B24057A91007479B4 /* Routing_Router.swift */; };
+		3816F53224057A91007479B4 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52C24057A91007479B4 /* Routing.swift */; };
+		3816F53424057B24007479B4 /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53324057B24007479B4 /* Matchable.swift */; };
+		3816F53624057BD4007479B4 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53524057BD4007479B4 /* Routable.swift */; };
+		3816F5382405D21B007479B4 /* String+Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5372405D21B007479B4 /* String+Matchable.swift */; };
+		3816F53A2406773A007479B4 /* AnyDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5392406773A007479B4 /* AnyDestination.swift */; };
 		38583CB624047FC80038FC4C /* CoreNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38583CB424047FC80038FC4C /* CoreNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CBD24047FFD0038FC4C /* NavigationContainer.swift */; };
 		38583CC1240480810038FC4C /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CC0240480810038FC4C /* Navigation.swift */; };
@@ -29,13 +38,10 @@
 		38583CDB2404815A0038FC4C /* CoreNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38583CB124047FC80038FC4C /* CoreNavigation.framework */; };
 		38583CDC2404815A0038FC4C /* CoreNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38583CB124047FC80038FC4C /* CoreNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38583CE32404830A0038FC4C /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE22404830A0038FC4C /* Destination.swift */; };
-		38583CE6240483780038FC4C /* AnyDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE5240483780038FC4C /* AnyDestination.swift */; };
+		38583CE6240483780038FC4C /* ViewDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE5240483780038FC4C /* ViewDestination.swift */; };
 		38583CE82404852E0038FC4C /* ViewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE72404852E0038FC4C /* ViewRequest.swift */; };
 		38583CEE2404888C0038FC4C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CED2404888C0038FC4C /* Request.swift */; };
 		38583CF2240488EE0038FC4C /* RouteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CF1240488EE0038FC4C /* RouteRequest.swift */; };
-		38583CF4240489380038FC4C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CF3240489380038FC4C /* Route.swift */; };
-		38583CF72404899F0038FC4C /* String+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CF62404899F0038FC4C /* String+Route.swift */; };
-		38583CF9240489B40038FC4C /* URL+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CF8240489B40038FC4C /* URL+Route.swift */; };
 		38583CFB24048A410038FC4C /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CFA24048A410038FC4C /* UserList.swift */; };
 		38583CFD24048A680038FC4C /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CFC24048A680038FC4C /* UserDetails.swift */; };
 		38583CFF24048AD00038FC4C /* DestinationUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CFE24048AD00038FC4C /* DestinationUserDetails.swift */; };
@@ -77,6 +83,15 @@
 		3816F52024055C76007479B4 /* AnimatedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRequest.swift; sourceTree = "<group>"; };
 		3816F52224055CBA007479B4 /* Request+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Animate.swift"; sourceTree = "<group>"; };
 		3816F524240570E5007479B4 /* Protectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protectable.swift; sourceTree = "<group>"; };
+		3816F52724057A91007479B4 /* Routing_RouteMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing_RouteMatch.swift; sourceTree = "<group>"; };
+		3816F52824057A91007479B4 /* Routing_Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing_Route.swift; sourceTree = "<group>"; };
+		3816F52A24057A91007479B4 /* Routing_RegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing_RegularExpression.swift; sourceTree = "<group>"; };
+		3816F52B24057A91007479B4 /* Routing_Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing_Router.swift; sourceTree = "<group>"; };
+		3816F52C24057A91007479B4 /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		3816F53324057B24007479B4 /* Matchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matchable.swift; sourceTree = "<group>"; };
+		3816F53524057BD4007479B4 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		3816F5372405D21B007479B4 /* String+Matchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Matchable.swift"; sourceTree = "<group>"; };
+		3816F5392406773A007479B4 /* AnyDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDestination.swift; sourceTree = "<group>"; };
 		38583CB124047FC80038FC4C /* CoreNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38583CB424047FC80038FC4C /* CoreNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreNavigation.h; sourceTree = "<group>"; };
 		38583CB524047FC80038FC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,13 +106,10 @@
 		38583CD4240481540038FC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38583CD6240481540038FC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38583CE22404830A0038FC4C /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
-		38583CE5240483780038FC4C /* AnyDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDestination.swift; sourceTree = "<group>"; };
+		38583CE5240483780038FC4C /* ViewDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDestination.swift; sourceTree = "<group>"; };
 		38583CE72404852E0038FC4C /* ViewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRequest.swift; sourceTree = "<group>"; };
 		38583CED2404888C0038FC4C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		38583CF1240488EE0038FC4C /* RouteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRequest.swift; sourceTree = "<group>"; };
-		38583CF3240489380038FC4C /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		38583CF62404899F0038FC4C /* String+Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Route.swift"; sourceTree = "<group>"; };
-		38583CF8240489B40038FC4C /* URL+Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Route.swift"; sourceTree = "<group>"; };
 		38583CFA24048A410038FC4C /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		38583CFC24048A680038FC4C /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		38583CFE24048AD00038FC4C /* DestinationUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationUserDetails.swift; sourceTree = "<group>"; };
@@ -129,6 +141,18 @@
 				3816F51C24055095007479B4 /* Configuration.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3816F52624057A91007479B4 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				3816F52C24057A91007479B4 /* Routing.swift */,
+				3816F52724057A91007479B4 /* Routing_RouteMatch.swift */,
+				3816F52824057A91007479B4 /* Routing_Route.swift */,
+				3816F52A24057A91007479B4 /* Routing_RegularExpression.swift */,
+				3816F52B24057A91007479B4 /* Routing_Router.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		38583CA724047FC80038FC4C = {
@@ -213,6 +237,7 @@
 		38583CE0240483020038FC4C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3816F52624057A91007479B4 /* Routing */,
 				38583CF5240489980038FC4C /* Extension */,
 				38583CE4240483700038FC4C /* Type */,
 				38583CE1240483050038FC4C /* Protocol */,
@@ -223,9 +248,10 @@
 		38583CE1240483050038FC4C /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				3816F53524057BD4007479B4 /* Routable.swift */,
+				3816F53324057B24007479B4 /* Matchable.swift */,
 				38583CE22404830A0038FC4C /* Destination.swift */,
 				38583CED2404888C0038FC4C /* Request.swift */,
-				38583CF3240489380038FC4C /* Route.swift */,
 				3816F51324049ACE007479B4 /* ProtectionSpace.swift */,
 				3816F51E24055866007479B4 /* Configurable.swift */,
 				3816F524240570E5007479B4 /* Protectable.swift */,
@@ -247,7 +273,8 @@
 		38583CEF240488DE0038FC4C /* Destination */ = {
 			isa = PBXGroup;
 			children = (
-				38583CE5240483780038FC4C /* AnyDestination.swift */,
+				38583CE5240483780038FC4C /* ViewDestination.swift */,
+				3816F5392406773A007479B4 /* AnyDestination.swift */,
 			);
 			path = Destination;
 			sourceTree = "<group>";
@@ -267,8 +294,7 @@
 		38583CF5240489980038FC4C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				38583CF62404899F0038FC4C /* String+Route.swift */,
-				38583CF8240489B40038FC4C /* URL+Route.swift */,
+				3816F5372405D21B007479B4 /* String+Matchable.swift */,
 				3816F511240499E9007479B4 /* Request+Protect.swift */,
 				3816F517240548F4007479B4 /* Request+Transition.swift */,
 				3816F52224055CBA007479B4 /* Request+Animate.swift */,
@@ -398,25 +424,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3816F5382405D21B007479B4 /* String+Matchable.swift in Sources */,
 				38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */,
 				38583CF2240488EE0038FC4C /* RouteRequest.swift in Sources */,
-				38583CF72404899F0038FC4C /* String+Route.swift in Sources */,
 				38583D0224048B860038FC4C /* Resolver.swift in Sources */,
-				38583CF9240489B40038FC4C /* URL+Route.swift in Sources */,
+				3816F53124057A91007479B4 /* Routing_Router.swift in Sources */,
+				3816F52E24057A91007479B4 /* Routing_Route.swift in Sources */,
+				3816F53024057A91007479B4 /* Routing_RegularExpression.swift in Sources */,
 				3816F518240548F4007479B4 /* Request+Transition.swift in Sources */,
 				3816F51F24055866007479B4 /* Configurable.swift in Sources */,
+				3816F53A2406773A007479B4 /* AnyDestination.swift in Sources */,
 				3816F52124055C76007479B4 /* AnimatedRequest.swift in Sources */,
-				38583CE6240483780038FC4C /* AnyDestination.swift in Sources */,
+				3816F53424057B24007479B4 /* Matchable.swift in Sources */,
+				38583CE6240483780038FC4C /* ViewDestination.swift in Sources */,
 				3816F525240570E5007479B4 /* Protectable.swift in Sources */,
 				38583CE82404852E0038FC4C /* ViewRequest.swift in Sources */,
 				38583CC1240480810038FC4C /* Navigation.swift in Sources */,
+				3816F52D24057A91007479B4 /* Routing_RouteMatch.swift in Sources */,
+				3816F53624057BD4007479B4 /* Routable.swift in Sources */,
 				3816F512240499E9007479B4 /* Request+Protect.swift in Sources */,
 				3816F51D24055095007479B4 /* Configuration.swift in Sources */,
 				3816F51424049ACE007479B4 /* ProtectionSpace.swift in Sources */,
 				3816F510240496D2007479B4 /* ProtectedRequest.swift in Sources */,
 				3816F52324055CBA007479B4 /* Request+Animate.swift in Sources */,
 				3816F51A2405491B007479B4 /* TransitionRequest.swift in Sources */,
-				38583CF4240489380038FC4C /* Route.swift in Sources */,
+				3816F53224057A91007479B4 /* Routing.swift in Sources */,
 				38583CEE2404888C0038FC4C /* Request.swift in Sources */,
 				38583CE32404830A0038FC4C /* Destination.swift in Sources */,
 			);

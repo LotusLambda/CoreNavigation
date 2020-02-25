@@ -6,20 +6,15 @@ public struct ViewRequest<DestinationType: Destination>: Request {
     let destination: DestinationType
     
     public func navigate() {
-        if let protectable = destination as? Protectable {
-            let resolver = Resolver<Void>(onComplete: { (_) in
-                self.resolve()
-            }) { (error) in
-                
-            }
-            protectable.protect(with: resolver)
-        } else {
-            resolve()
+        CoreNavigation.protect(destination: destination, continue: {
+            self.resolve()
+        }) { (error) in
+            fatalError()
         }
     }
     
     private func resolve() {
-        destination.resolve(with: Resolver<DestinationType.ViewType>(onComplete: { view in
+        destination.resolveTarget(with: Resolver<DestinationType.ViewType>(route: nil, onComplete: { view in
             self.navigation.push(view: view, configuration: self.configuration)
         }, onError: { (error) in
             

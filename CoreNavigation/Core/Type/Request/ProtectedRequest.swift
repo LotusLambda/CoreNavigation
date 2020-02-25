@@ -4,7 +4,7 @@ public struct ProtectedRequest<BaseRequest: Request, ProtectionSpaceType: Protec
     let protectionSpace: ProtectionSpaceType
 
     public func navigate() {
-        let resolver = Resolver<Void>.init(onComplete: { (boolean) in
+        let resolver = Resolver<Void>.init(route: nil, onComplete: { (boolean) in
             self.base.navigate()
         }, onError: { (error) in
             

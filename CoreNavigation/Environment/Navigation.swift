@@ -75,7 +75,7 @@ public class Navigation: ObservableObject {
 
 extension Navigation {
     public func request<ViewType: View>(_ view: ViewType) -> some Request {
-        ViewRequest(navigation: self, configuration: Configuration(), destination: AnyDestination(content: { AnyDestination.ViewType(view) }))
+        ViewRequest(navigation: self, configuration: Configuration(), destination: ViewDestination(content: { ViewDestination.ViewType(view) }))
     }
     
     public func request<DestinationType: Destination>(_ destination: DestinationType) -> some Request {
@@ -83,11 +83,19 @@ extension Navigation {
     }
     
     public func request(_ route: String) -> some Request {
-        RouteRequest(navigation: self, configuration: Configuration(), route: route)
+        RouteRequest(navigation: self, configuration: Configuration(), uri: route)
     }
     
     public func request(_ url: URL) -> some Request {
-        RouteRequest(navigation: self, configuration: Configuration(), route: url)
+        RouteRequest(navigation: self, configuration: Configuration(), uri: url.absoluteString)
     }
     
+}
+
+// MARK: Static
+
+extension Navigation {
+    public static func register<T: Routable>(_ routableType: T.Type) {
+        Routing.Router.instance.register(routableType: routableType)
+    }
 }

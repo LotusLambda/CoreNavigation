@@ -1,10 +1,16 @@
 import CoreNavigation
 import SwiftUI
 
-struct DestinationUserDetails: Destination, Protectable {
+struct DestinationUserDetails: Destination, Protectable, Routable {
+    init(route: Routing.Route) throws {
+        
+    }
+    
+    static var routePatterns: [String] = [ "user/:id" ]
+    
     typealias ViewType = UserDetails
     
-    func resolve(with resolver: Resolver<Self.ViewType>) {
+    func resolveTarget(with resolver: Resolver<Self.ViewType>) {
         resolver.complete(.init())
     }
     

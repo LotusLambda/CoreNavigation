@@ -1,7 +1,7 @@
 import SwiftUI
 
-public protocol Destination {
+public protocol Destination: AnyDestination {
     associatedtype ViewType: View
     
-    func resolve(with resolver: Resolver<Self.ViewType>)
+    func resolveTarget(with resolver: Resolver<Self.ViewType>)
 }
