@@ -12,7 +12,7 @@ struct UserDetails: View {
                 Text("Pop")
             }
             .frame(width: proxy.size.width, height: proxy.size.height)
-//            .background(Color.blue)
+            .background(Color.orange)
         }
     }
 }

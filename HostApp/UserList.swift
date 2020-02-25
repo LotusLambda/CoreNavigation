@@ -17,10 +17,10 @@ struct UserList: View {
     var body: some View {
         Button(action: {
             self.navigation
-                .request(UserDetails())
+                .request(DestinationUserDetails())
                 .protect(with: ProtecSpc())
-                .animate(.easeInOut(duration: 1))
                 .transition(AnyTransition.move(edge: .top))
+                .animate(.easeInOut(duration: 0.3))
                 .navigate()
         }) {
             Text("User details!").onAppear {

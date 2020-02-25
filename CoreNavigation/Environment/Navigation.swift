@@ -32,7 +32,11 @@ public class Navigation: ObservableObject {
         self.currentView = AnyView(currentView)
     }
 
-    public func push<ViewType: View>(view: ViewType, configuration: Configuration? = nil) {
+    public func push<ViewType: View>(view: ViewType) {
+        push(view: view, configuration: nil)
+    }
+    
+    func push<ViewType: View>(view: ViewType, configuration: Configuration?) {
         stack.push(view: currentView, configuration: configuration)
         
         previousView = currentView

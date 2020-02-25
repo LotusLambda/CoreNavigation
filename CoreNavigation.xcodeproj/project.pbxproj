@@ -16,6 +16,7 @@
 		3816F51F24055866007479B4 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F51E24055866007479B4 /* Configurable.swift */; };
 		3816F52124055C76007479B4 /* AnimatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52024055C76007479B4 /* AnimatedRequest.swift */; };
 		3816F52324055CBA007479B4 /* Request+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52224055CBA007479B4 /* Request+Animate.swift */; };
+		3816F525240570E5007479B4 /* Protectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F524240570E5007479B4 /* Protectable.swift */; };
 		38583CB624047FC80038FC4C /* CoreNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38583CB424047FC80038FC4C /* CoreNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CBD24047FFD0038FC4C /* NavigationContainer.swift */; };
 		38583CC1240480810038FC4C /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CC0240480810038FC4C /* Navigation.swift */; };
@@ -75,6 +76,7 @@
 		3816F51E24055866007479B4 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		3816F52024055C76007479B4 /* AnimatedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRequest.swift; sourceTree = "<group>"; };
 		3816F52224055CBA007479B4 /* Request+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Animate.swift"; sourceTree = "<group>"; };
+		3816F524240570E5007479B4 /* Protectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protectable.swift; sourceTree = "<group>"; };
 		38583CB124047FC80038FC4C /* CoreNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38583CB424047FC80038FC4C /* CoreNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreNavigation.h; sourceTree = "<group>"; };
 		38583CB524047FC80038FC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				38583CF3240489380038FC4C /* Route.swift */,
 				3816F51324049ACE007479B4 /* ProtectionSpace.swift */,
 				3816F51E24055866007479B4 /* Configurable.swift */,
+				3816F524240570E5007479B4 /* Protectable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				3816F51F24055866007479B4 /* Configurable.swift in Sources */,
 				3816F52124055C76007479B4 /* AnimatedRequest.swift in Sources */,
 				38583CE6240483780038FC4C /* AnyDestination.swift in Sources */,
+				3816F525240570E5007479B4 /* Protectable.swift in Sources */,
 				38583CE82404852E0038FC4C /* ViewRequest.swift in Sources */,
 				38583CC1240480810038FC4C /* Navigation.swift in Sources */,
 				3816F512240499E9007479B4 /* Request+Protect.swift in Sources */,
