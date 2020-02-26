@@ -83,13 +83,16 @@ extension Navigation {
     }
     
     public func request(_ route: String) -> some Request {
-        RouteRequest(navigation: self, configuration: Configuration(), uri: route)
+        request(matchable: route)
     }
     
     public func request(_ url: URL) -> some Request {
-        RouteRequest(navigation: self, configuration: Configuration(), uri: url.absoluteString)
+        request(matchable: url)
     }
     
+    func request(matchable: Matchable) -> some Request {
+        RouteRequest(navigation: self, configuration: Configuration(), uri: matchable.uri)
+    }
 }
 
 // MARK: Static

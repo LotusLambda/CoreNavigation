@@ -1,5 +1,5 @@
 /// Used in route matching.
-public protocol Matchable {
+protocol Matchable {
     /// Route string.
     var uri: String { get }
 }

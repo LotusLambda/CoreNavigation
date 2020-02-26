@@ -15,17 +15,27 @@ struct UserList: View {
     @EnvironmentObject var navigation: Navigation
     
     var body: some View {
-        Button(action: {
-            self.navigation
-                .request("user/1")
-                .protect(with: ProtecSpc())
-                .animate(.easeInOut(duration: 0.3))
-                .transition(.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom)))
-                .navigate()
+        Route("user/1", configure: { $0
+            .animate(.easeInOut(duration: 0.3))
+            .transition(.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom)))
         }) {
-            Text("User details!").onAppear {
-                print("Appear!")
-            }
+            Text("User details ...")
         }
+        //        Route("user/1", configure: { (request) -> AnyRequest in
+        ////            return request.animate(.easeInOut(duration: 0.3)).asAnyRequest()
+        ////                .transition(.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom)))
+        //        }) {
+        //            Text("User details ...")
+        //        }
+        //        Button(action: {
+        //            self.navigation
+        //                .request("user/1")
+        //                .protect(with: ProtecSpc())
+        //                .animate(.easeInOut(duration: 0.3))
+        //                .transition(.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom)))
+        //                .navigate()
+        //        }) {
+        //            Text("User details!")
+        //        }
     }
 }
