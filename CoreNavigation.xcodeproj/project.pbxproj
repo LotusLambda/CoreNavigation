@@ -28,6 +28,10 @@
 		3816F53A2406773A007479B4 /* AnyDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5392406773A007479B4 /* AnyDestination.swift */; };
 		3816F53C24069342007479B4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53B24069342007479B4 /* Route.swift */; };
 		3816F54024069D69007479B4 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53F24069D69007479B4 /* Link.swift */; };
+		3816F5422406BA91007479B4 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5412406BA91007479B4 /* ViewControllerWrapper.swift */; };
+		3816F5442406BF0C007479B4 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5432406BF0C007479B4 /* OrangeViewController.swift */; };
+		3816F5462406C30C007479B4 /* ViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5452406C30C007479B4 /* ViewWrapper.swift */; };
+		3816F5482406C3C5007479B4 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5472406C3C5007479B4 /* BlueView.swift */; };
 		38583CB624047FC80038FC4C /* CoreNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38583CB424047FC80038FC4C /* CoreNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CBD24047FFD0038FC4C /* NavigationContainer.swift */; };
 		38583CC1240480810038FC4C /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CC0240480810038FC4C /* Navigation.swift */; };
@@ -96,6 +100,10 @@
 		3816F5392406773A007479B4 /* AnyDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDestination.swift; sourceTree = "<group>"; };
 		3816F53B24069342007479B4 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		3816F53F24069D69007479B4 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		3816F5412406BA91007479B4 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
+		3816F5432406BF0C007479B4 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
+		3816F5452406C30C007479B4 /* ViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWrapper.swift; sourceTree = "<group>"; };
+		3816F5472406C3C5007479B4 /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		38583CB124047FC80038FC4C /* CoreNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38583CB424047FC80038FC4C /* CoreNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreNavigation.h; sourceTree = "<group>"; };
 		38583CB524047FC80038FC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +204,8 @@
 				38583CBD24047FFD0038FC4C /* NavigationContainer.swift */,
 				3816F53B24069342007479B4 /* Route.swift */,
 				3816F53F24069D69007479B4 /* Link.swift */,
+				3816F5412406BA91007479B4 /* ViewControllerWrapper.swift */,
+				3816F5452406C30C007479B4 /* ViewWrapper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,6 +231,8 @@
 				38583CD3240481540038FC4C /* LaunchScreen.storyboard */,
 				38583CD6240481540038FC4C /* Info.plist */,
 				38583CD0240481540038FC4C /* Preview Content */,
+				3816F5432406BF0C007479B4 /* OrangeViewController.swift */,
+				3816F5472406C3C5007479B4 /* BlueView.swift */,
 			);
 			path = HostApp;
 			sourceTree = "<group>";
@@ -430,8 +442,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3816F5422406BA91007479B4 /* ViewControllerWrapper.swift in Sources */,
 				3816F5382405D21B007479B4 /* Matchable+Types.swift in Sources */,
 				38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */,
+				3816F5462406C30C007479B4 /* ViewWrapper.swift in Sources */,
 				38583CF2240488EE0038FC4C /* RouteRequest.swift in Sources */,
 				3816F54024069D69007479B4 /* Link.swift in Sources */,
 				38583D0224048B860038FC4C /* Resolver.swift in Sources */,
@@ -470,7 +484,9 @@
 				38583CFB24048A410038FC4C /* UserList.swift in Sources */,
 				38583CC9240481530038FC4C /* AppDelegate.swift in Sources */,
 				38583CCB240481530038FC4C /* SceneDelegate.swift in Sources */,
+				3816F5482406C3C5007479B4 /* BlueView.swift in Sources */,
 				38583CCD240481530038FC4C /* ContentView.swift in Sources */,
+				3816F5442406BF0C007479B4 /* OrangeViewController.swift in Sources */,
 				38583CFD24048A680038FC4C /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

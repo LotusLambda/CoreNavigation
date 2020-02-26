@@ -74,12 +74,32 @@ public class Navigation: ObservableObject {
 // MARK: Navigation requests
 
 extension Navigation {
-    public func request<ViewType: View>(_ view: ViewType) -> some Request {
-        DestinationRequest(navigation: self, configuration: Configuration(), destination: ViewDestination(content: { view }))
-    }
-    
     public func request<DestinationType: Destination>(_ destination: DestinationType) -> some Request {
         DestinationRequest(navigation: self, configuration: Configuration(), destination: destination)
+    }
+    
+    @inlinable public func request<ViewType: View>(_ view: @escaping () -> ViewType) -> some Request {
+        request(ViewDestination(content: view))
+    }
+    
+    @inlinable public func request<ViewType: View>(_ view: ViewType) -> some Request {
+        request { view }
+    }
+    
+    @inlinable public func request<ViewControllerType: UIViewController>(_ viewController: @escaping () -> ViewControllerType) -> some Request {
+        request { ViewControllerWrapper(viewController: viewController()) }
+    }
+    
+    @inlinable public func request<ViewControllerType: UIViewController>(_ viewController: ViewControllerType) -> some Request {
+        request { viewController }
+    }
+    
+    @inlinable public func request<ViewType: UIView>(_ view: @escaping () -> ViewType) -> some Request {
+        request { ViewWrapper(view: view()) }
+    }
+    
+    @inlinable public func request<ViewType: UIView>(_ view: ViewType) -> some Request {
+        request { view }
     }
     
     public func request(_ route: String) -> some Request {

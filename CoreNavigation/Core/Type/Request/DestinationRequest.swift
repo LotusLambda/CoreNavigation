@@ -17,7 +17,7 @@ public struct DestinationRequest<DestinationType: Destination>: Request {
         destination.resolveTarget(with: Resolver<DestinationType.ViewType>(route: nil, onComplete: { view in
             self.navigation.push(view: view, configuration: self.configuration)
         }, onError: { (error) in
-            
+            fatalError()
         }))
     }
 }

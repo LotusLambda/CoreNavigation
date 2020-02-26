@@ -15,9 +15,9 @@ struct UserList: View {
     @EnvironmentObject var navigation: Navigation
     
     var body: some View {
-        Link(
-            UserDetails()
-        , { $0
+        Link({
+            BlueView()
+        }, { $0
             .animate(.easeInOut(duration: 0.3))
             .transition(.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom)))
             .protect(with: ProtecSpc())
