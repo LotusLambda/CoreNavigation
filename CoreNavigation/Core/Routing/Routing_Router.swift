@@ -16,7 +16,7 @@ extension Routing {
             self.registrations.merge(registrations) { $1 }
         }
 
-        func unregister(destinationType: ViewDestination.Type) {
+        func unregister(destinationType: AnyDestination.Type) {
             registrations = registrations.filter { (element) -> Bool in
                 element.value.destinationType == destinationType
             }

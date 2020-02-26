@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct ViewRequest<DestinationType: Destination>: Request {
+public struct DestinationRequest<DestinationType: Destination>: Request {
     let navigation: Navigation
     public var configuration: Configuration
     let destination: DestinationType

@@ -75,11 +75,11 @@ public class Navigation: ObservableObject {
 
 extension Navigation {
     public func request<ViewType: View>(_ view: ViewType) -> some Request {
-        ViewRequest(navigation: self, configuration: Configuration(), destination: ViewDestination(content: { ViewDestination.ViewType(view) }))
+        DestinationRequest(navigation: self, configuration: Configuration(), destination: ViewDestination(content: { view }))
     }
     
     public func request<DestinationType: Destination>(_ destination: DestinationType) -> some Request {
-        ViewRequest(navigation: self, configuration: Configuration(), destination: destination)
+        DestinationRequest(navigation: self, configuration: Configuration(), destination: destination)
     }
     
     public func request(_ route: String) -> some Request {

@@ -6,6 +6,8 @@ struct DestinationUserDetails: Destination, Protectable, Routable {
         
     }
     
+    init() {}
+    
     static var routePatterns: [String] = [ "user/:id" ]
     
     typealias ViewType = UserDetails
