@@ -5,19 +5,31 @@ public struct DestinationRequest<DestinationType: Destination>: Request {
     public var configuration: Configuration
     let destination: DestinationType
     
-    public func navigate() {
+    public func push() {
         CoreNavigation.protect(destination: destination, continue: {
-            self.resolve()
+            self.resolveTarget({ view in
+                self.navigation.push(view: view, configuration: self.configuration)
+            }) { (error) in
+                fatalError()
+            }
         }) { (error) in
             fatalError()
         }
     }
     
-    private func resolve() {
-        destination.resolveTarget(with: Resolver<DestinationType.ViewType>(route: nil, onComplete: { view in
-            self.navigation.push(view: view, configuration: self.configuration)
-        }, onError: { (error) in
+    public func sheet() {
+        CoreNavigation.protect(destination: destination, continue: {
+            self.resolveTarget({ (view) in
+                self.navigation.sheet(view: view, configuration: self.configuration)
+            }) { (error) in
+                fatalError()
+            }
+        }) { (error) in
             fatalError()
-        }))
+        }
+    }
+    
+    private func resolveTarget(_ onComplete: @escaping (DestinationType.ViewType) -> Void, onError: @escaping (Error) -> Void) {
+        destination.resolveTarget(with: Resolver<DestinationType.ViewType>(route: nil, onComplete: onComplete, onError: onError))
     }
 }

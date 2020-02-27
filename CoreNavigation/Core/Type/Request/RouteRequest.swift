@@ -8,7 +8,11 @@ public struct RouteRequest: Request {
     
     var cancellable: AnyCancellable?
     
-    public func navigate() {
+    public func push() {
+        resolve()
+    }
+    
+    public func sheet() {
         resolve()
     }
     

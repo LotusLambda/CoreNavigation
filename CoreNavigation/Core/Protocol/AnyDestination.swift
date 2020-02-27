@@ -31,15 +31,7 @@ extension Destination {
 }
 
 extension Destination where ViewType: Routed {
-    public func resolveTarget(for route: Routing.Route, with resolver: Resolver<AnyView>) {
-        self.resolveTarget(with: .init(route: route, onComplete: { (view) in
-            resolver.complete(AnyView(view))
-        }, onError: { (error) in
-            resolver.error(error)
-        }))
-    }
-    
-    public func resolve(with resolver: Resolver<ViewType>) {
+    public func resolveTarget(with resolver: Resolver<ViewType>) {
         if let route = resolver.route {
             do {
                 resolver.complete(try .init(route: route))

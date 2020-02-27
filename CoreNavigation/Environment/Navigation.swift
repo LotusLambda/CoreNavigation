@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 
 class Stack {
     struct Item {
@@ -7,7 +8,8 @@ class Stack {
     }
     
     var items: [Item] = []
-    
+    var sheets: [SheetModifier.ViewModel] = []
+
     func push(view: AnyView, configuration: Configuration?) {
         items.append(.init(view: view, configuration: configuration))
     }
@@ -24,12 +26,14 @@ public class Navigation: ObservableObject {
     }
     
     private let stack = Stack()
-    private(set) var currentView: AnyView
+    
+    @Published private(set) var currentView: AnyView
     private(set) var previousView: AnyView?
+    var currentSheet: SheetModifier.ViewModel = .init()
     @Published private(set) var direction: Direction?
     
     init<ViewType: View>(currentView: ViewType) {
-        self.currentView = AnyView(currentView)
+        self.currentView = AnyView(currentView.modifier(SheetModifier(viewModel: currentSheet)))
     }
 
     public func push<ViewType: View>(view: ViewType) {
@@ -37,15 +41,37 @@ public class Navigation: ObservableObject {
     }
     
     func push<ViewType: View>(view: ViewType, configuration: Configuration?) {
+        let view = build(view, with: configuration)
+        
         stack.push(view: currentView, configuration: configuration)
         
         previousView = currentView
         
-        currentView = configure(view: view, with: configuration)
+        currentView = AnyView(view)
         
         withAnimation(configuration?.animation) {
             direction = .forward
         }
+    }
+    
+    public func sheet<ViewType: View>(view: ViewType) {
+        sheet(view: view, configuration: nil)
+    }
+    
+    func sheet<ViewType: View>(view: ViewType, configuration: Configuration?) {
+        let view = build(view, with: configuration)
+        
+        let sheetViewModel = currentSheet
+        stack.sheets.append(sheetViewModel)
+        
+        let newViewModel = SheetModifier.ViewModel()
+        currentSheet = newViewModel
+
+        sheetViewModel.content = AnyView(view
+            .modifier(SheetModifier(viewModel: newViewModel))
+            .environmentObject(self)
+        )
+        sheetViewModel.isPresented = true
     }
     
     public func pop() {
@@ -60,14 +86,19 @@ public class Navigation: ObservableObject {
         }
     }
     
-    private func configure<ViewType: View>(view: ViewType, with configuration: Configuration?) -> AnyView {
+    public func dismiss() {
+        guard let viewModel = self.stack.sheets.popLast() else { return }
+
+        viewModel.isPresented = false
+    }
+    
+    private func build<ViewType: View>(_ view: ViewType, with configuration: Configuration?) -> some View {
         var view = AnyView(view)
-        
         if let transition = configuration?.transition {
             view = AnyView(view.transition(transition))
         }
         
-        return view
+        return view.environmentObject(self)
     }
 }
 

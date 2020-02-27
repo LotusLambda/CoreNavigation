@@ -21,7 +21,7 @@ public struct Route<Label: View>: View {
     
     public var body: some View {
         Button(action: {
-            self.request().navigate()
+            self.request().push()
         }) {
             label()
         }

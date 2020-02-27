@@ -6,9 +6,15 @@ public struct TransitionRequest<BaseRequest: Request>: Request {
     let base: BaseRequest
     let transition: AnyTransition
 
-    public func navigate() {
+    public func push() {
         configuration.transition = transition
         
-        self.base.navigate()
+        self.base.push()
+    }
+    
+    public func sheet() {
+        configuration.transition = transition
+
+        self.base.sheet()
     }
 }

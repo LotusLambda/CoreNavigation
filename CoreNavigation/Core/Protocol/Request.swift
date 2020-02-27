@@ -1,5 +1,6 @@
 import SwiftUI
 
 public protocol Request: Configurable {
-    func navigate()
+    func push()
+    func sheet()
 }

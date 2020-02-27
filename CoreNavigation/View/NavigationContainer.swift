@@ -35,9 +35,11 @@ public struct NavigationContainer<Content> : View where Content : View {
                     self.navigation.currentView
                         .environmentObject(self.navigation)
                         .background(Color.white)
-                        .disabled(false)    
+                        .disabled(false)
                 }
             }
-        }.edgesIgnoringSafeArea(.all)
+        }
+        .edgesIgnoringSafeArea(.all)
+        .environmentObject(self.navigation)
     }
 }

@@ -32,6 +32,9 @@
 		3816F5442406BF0C007479B4 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5432406BF0C007479B4 /* OrangeViewController.swift */; };
 		3816F5462406C30C007479B4 /* ViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5452406C30C007479B4 /* ViewWrapper.swift */; };
 		3816F5482406C3C5007479B4 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5472406C3C5007479B4 /* BlueView.swift */; };
+		3816F54A2406CE94007479B4 /* DestinationColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5492406CE94007479B4 /* DestinationColor.swift */; };
+		3816F54C2406CE9B007479B4 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F54B2406CE9B007479B4 /* ColorView.swift */; };
+		3816F54E2406CF4C007479B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F54D2406CF4C007479B4 /* HomeView.swift */; };
 		38583CB624047FC80038FC4C /* CoreNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38583CB424047FC80038FC4C /* CoreNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CBD24047FFD0038FC4C /* NavigationContainer.swift */; };
 		38583CC1240480810038FC4C /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CC0240480810038FC4C /* Navigation.swift */; };
@@ -48,10 +51,8 @@
 		38583CE82404852E0038FC4C /* DestinationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE72404852E0038FC4C /* DestinationRequest.swift */; };
 		38583CEE2404888C0038FC4C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CED2404888C0038FC4C /* Request.swift */; };
 		38583CF2240488EE0038FC4C /* RouteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CF1240488EE0038FC4C /* RouteRequest.swift */; };
-		38583CFB24048A410038FC4C /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CFA24048A410038FC4C /* UserList.swift */; };
-		38583CFD24048A680038FC4C /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CFC24048A680038FC4C /* UserDetails.swift */; };
-		38583CFF24048AD00038FC4C /* DestinationUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CFE24048AD00038FC4C /* DestinationUserDetails.swift */; };
 		38583D0224048B860038FC4C /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583D0124048B860038FC4C /* Resolver.swift */; };
+		38F0233F2407FA5300B6C8E3 /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,9 @@
 		3816F5432406BF0C007479B4 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 		3816F5452406C30C007479B4 /* ViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWrapper.swift; sourceTree = "<group>"; };
 		3816F5472406C3C5007479B4 /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		3816F5492406CE94007479B4 /* DestinationColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationColor.swift; sourceTree = "<group>"; };
+		3816F54B2406CE9B007479B4 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		3816F54D2406CF4C007479B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		38583CB124047FC80038FC4C /* CoreNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38583CB424047FC80038FC4C /* CoreNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreNavigation.h; sourceTree = "<group>"; };
 		38583CB524047FC80038FC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,10 +126,9 @@
 		38583CE72404852E0038FC4C /* DestinationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationRequest.swift; sourceTree = "<group>"; };
 		38583CED2404888C0038FC4C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		38583CF1240488EE0038FC4C /* RouteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRequest.swift; sourceTree = "<group>"; };
-		38583CFA24048A410038FC4C /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
-		38583CFC24048A680038FC4C /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
-		38583CFE24048AD00038FC4C /* DestinationUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationUserDetails.swift; sourceTree = "<group>"; };
 		38583D0124048B860038FC4C /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		38F0233C240722A400B6C8E3 /* HostApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HostApp.entitlements; sourceTree = "<group>"; };
+		38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +204,7 @@
 		38583CBC24047FEB0038FC4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38F0233D2407FA4300B6C8E3 /* Modifier */,
 				38583CBD24047FFD0038FC4C /* NavigationContainer.swift */,
 				3816F53B24069342007479B4 /* Route.swift */,
 				3816F53F24069D69007479B4 /* Link.swift */,
@@ -221,18 +225,19 @@
 		38583CC7240481530038FC4C /* HostApp */ = {
 			isa = PBXGroup;
 			children = (
-				38583CFE24048AD00038FC4C /* DestinationUserDetails.swift */,
+				38F0233C240722A400B6C8E3 /* HostApp.entitlements */,
 				38583CC8240481530038FC4C /* AppDelegate.swift */,
 				38583CCA240481530038FC4C /* SceneDelegate.swift */,
 				38583CCC240481530038FC4C /* ContentView.swift */,
-				38583CFA24048A410038FC4C /* UserList.swift */,
-				38583CFC24048A680038FC4C /* UserDetails.swift */,
 				38583CCE240481540038FC4C /* Assets.xcassets */,
 				38583CD3240481540038FC4C /* LaunchScreen.storyboard */,
-				38583CD6240481540038FC4C /* Info.plist */,
 				38583CD0240481540038FC4C /* Preview Content */,
 				3816F5432406BF0C007479B4 /* OrangeViewController.swift */,
 				3816F5472406C3C5007479B4 /* BlueView.swift */,
+				3816F54B2406CE9B007479B4 /* ColorView.swift */,
+				38583CD6240481540038FC4C /* Info.plist */,
+				3816F5492406CE94007479B4 /* DestinationColor.swift */,
+				3816F54D2406CF4C007479B4 /* HomeView.swift */,
 			);
 			path = HostApp;
 			sourceTree = "<group>";
@@ -326,6 +331,14 @@
 				38583D0124048B860038FC4C /* Resolver.swift */,
 			);
 			path = Resolver;
+			sourceTree = "<group>";
+		};
+		38F0233D2407FA4300B6C8E3 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +477,7 @@
 				38583CC1240480810038FC4C /* Navigation.swift in Sources */,
 				3816F52D24057A91007479B4 /* Routing_RouteMatch.swift in Sources */,
 				3816F53624057BD4007479B4 /* Routable.swift in Sources */,
+				38F0233F2407FA5300B6C8E3 /* SheetModifier.swift in Sources */,
 				3816F512240499E9007479B4 /* Request+Protect.swift in Sources */,
 				3816F51D24055095007479B4 /* Configuration.swift in Sources */,
 				3816F51424049ACE007479B4 /* ProtectionSpace.swift in Sources */,
@@ -480,14 +494,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38583CFF24048AD00038FC4C /* DestinationUserDetails.swift in Sources */,
-				38583CFB24048A410038FC4C /* UserList.swift in Sources */,
+				3816F54A2406CE94007479B4 /* DestinationColor.swift in Sources */,
 				38583CC9240481530038FC4C /* AppDelegate.swift in Sources */,
+				3816F54C2406CE9B007479B4 /* ColorView.swift in Sources */,
 				38583CCB240481530038FC4C /* SceneDelegate.swift in Sources */,
 				3816F5482406C3C5007479B4 /* BlueView.swift in Sources */,
+				3816F54E2406CF4C007479B4 /* HomeView.swift in Sources */,
 				38583CCD240481530038FC4C /* ContentView.swift in Sources */,
 				3816F5442406BF0C007479B4 /* OrangeViewController.swift in Sources */,
-				38583CFD24048A680038FC4C /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +702,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HostApp/HostApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"HostApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 4W64BNS34B;
 				ENABLE_PREVIEWS = YES;
@@ -699,6 +715,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.HostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -708,7 +725,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HostApp/HostApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"HostApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 4W64BNS34B;
 				ENABLE_PREVIEWS = YES;
@@ -719,6 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.HostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

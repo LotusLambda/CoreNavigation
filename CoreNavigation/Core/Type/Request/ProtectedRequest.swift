@@ -3,11 +3,20 @@ public struct ProtectedRequest<BaseRequest: Request, ProtectionSpaceType: Protec
     let base: BaseRequest
     let protectionSpace: ProtectionSpaceType
 
-    public func navigate() {
+    public func push() {
         let resolver = Resolver<Void>.init(route: nil, onComplete: { (boolean) in
-            self.base.navigate()
+            self.base.push()
         }, onError: { (error) in
-            
+            fatalError()
+        })
+        self.protectionSpace.protect(with: resolver)
+    }
+    
+    public func sheet() {
+        let resolver = Resolver<Void>.init(route: nil, onComplete: { (boolean) in
+            self.base.sheet()
+        }, onError: { (error) in
+            fatalError()
         })
         self.protectionSpace.protect(with: resolver)
     }

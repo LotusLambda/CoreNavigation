@@ -2,10 +2,12 @@ import SwiftUI
 import CoreNavigation
 
 struct ContentView: View {
+    @State var color: Color = .orange
+    
     var body: some View {
         GeometryReader { (proxy) in
             NavigationContainer {
-                UserList()
+                HomeView(color: self.$color)
             }.frame(width: proxy.size.width, height: proxy.size.height)
         }
     }

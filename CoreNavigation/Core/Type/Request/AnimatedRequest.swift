@@ -6,9 +6,15 @@ public struct AnimatedRequest<BaseRequest: Request>: Request {
     let base: BaseRequest
     let animation: Animation
 
-    public func navigate() {
+    public func push() {
         configuration.animation = animation
         
-        self.base.navigate()
+        self.base.push()
+    }
+    
+    public func sheet() {
+        configuration.animation = animation
+        
+        self.base.sheet()
     }
 }

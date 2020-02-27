@@ -1,18 +1,19 @@
 import SwiftUI
 import CoreNavigation
 
-struct UserDetails: View {
+struct HomeView: View {
     @EnvironmentObject var navigation: Navigation
+    @Binding var color: Color
     
     var body: some View {
         GeometryReader { (proxy) in
             Button(action: {
-                self.navigation.pop()
+                self.navigation.request(DestinationColor(color: self.$color)).sheet()
             }) {
-                Text("Pop")
+                Text("Color!")
             }
             .frame(width: proxy.size.width, height: proxy.size.height)
-            .background(Color.orange)
+            .background(self.color)
         }
     }
 }
