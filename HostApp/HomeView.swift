@@ -8,7 +8,10 @@ struct HomeView: View {
     var body: some View {
         GeometryReader { (proxy) in
             Button(action: {
-                self.navigation.request(DestinationColor(color: self.$color)).sheet()
+                self.navigation.request(DestinationColor(color: self.$color))
+                    .animate(.easeInOut(duration: 0.3))
+                    .transition(.move(edge: .top))
+                    .push()
             }) {
                 Text("Color!")
             }

@@ -11,17 +11,13 @@ struct ColorView: View {
                 self.color.frame(width: proxy.size.width, height: proxy.size.height)
                     
                 HStack {
-                    Button(action: {
-                        self.navigation.pop()
-                    }, label: {
+                    Pop {
                         Text("Pop!")
-                    })
+                    }
                     
-                    Button(action: {
-                        self.navigation.dismiss()
-                    }, label: {
+                    Dismiss {
                         Text("Dismiss!")
-                    })
+                    }
                     
                     Button(action: {
                         self.navigation.request(DestinationColor(color: self.$color)).sheet()

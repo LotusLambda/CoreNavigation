@@ -26,15 +26,16 @@ public class Navigation: ObservableObject {
     }
     
     private let stack = Stack()
-    
-    @Published private(set) var currentView: AnyView
-    @Published private(set) var direction: Direction?
 
-    var currentSheet: SheetModifier.ViewModel = .init()
+    var currentSheet: SheetModifier.ViewModel
     
+    @Published private(set) var direction: Direction?
+    private(set) var currentView: AnyView
     private(set) var previousView: AnyView?
     
     init<ViewType: View>(currentView: ViewType) {
+        let currentSheet = SheetModifier.ViewModel()
+        self.currentSheet = currentSheet
         self.currentView = AnyView(currentView.modifier(SheetModifier(viewModel: currentSheet)))
     }
 

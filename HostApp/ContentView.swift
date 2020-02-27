@@ -2,7 +2,7 @@ import SwiftUI
 import CoreNavigation
 
 struct ContentView: View {
-    @State var color: Color = .orange
+    @State var color: Color = .green
     
     var body: some View {
         GeometryReader { (proxy) in

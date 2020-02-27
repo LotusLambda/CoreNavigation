@@ -53,6 +53,8 @@
 		38583CF2240488EE0038FC4C /* RouteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CF1240488EE0038FC4C /* RouteRequest.swift */; };
 		38583D0224048B860038FC4C /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583D0124048B860038FC4C /* Resolver.swift */; };
 		38F0233F2407FA5300B6C8E3 /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */; };
+		38F023412408125100B6C8E3 /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F023402408125100B6C8E3 /* Dismiss.swift */; };
+		38F023432408132700B6C8E3 /* Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F023422408132700B6C8E3 /* Pop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,8 @@
 		38583D0124048B860038FC4C /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		38F0233C240722A400B6C8E3 /* HostApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HostApp.entitlements; sourceTree = "<group>"; };
 		38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
+		38F023402408125100B6C8E3 /* Dismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismiss.swift; sourceTree = "<group>"; };
+		38F023422408132700B6C8E3 /* Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 				38583CBD24047FFD0038FC4C /* NavigationContainer.swift */,
 				3816F53B24069342007479B4 /* Route.swift */,
 				3816F53F24069D69007479B4 /* Link.swift */,
+				38F023402408125100B6C8E3 /* Dismiss.swift */,
+				38F023422408132700B6C8E3 /* Pop.swift */,
 				3816F5412406BA91007479B4 /* ViewControllerWrapper.swift */,
 				3816F5452406C30C007479B4 /* ViewWrapper.swift */,
 			);
@@ -460,6 +466,7 @@
 				38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */,
 				3816F5462406C30C007479B4 /* ViewWrapper.swift in Sources */,
 				38583CF2240488EE0038FC4C /* RouteRequest.swift in Sources */,
+				38F023432408132700B6C8E3 /* Pop.swift in Sources */,
 				3816F54024069D69007479B4 /* Link.swift in Sources */,
 				38583D0224048B860038FC4C /* Resolver.swift in Sources */,
 				3816F53124057A91007479B4 /* Routing_Router.swift in Sources */,
@@ -479,6 +486,7 @@
 				3816F53624057BD4007479B4 /* Routable.swift in Sources */,
 				38F0233F2407FA5300B6C8E3 /* SheetModifier.swift in Sources */,
 				3816F512240499E9007479B4 /* Request+Protect.swift in Sources */,
+				38F023412408125100B6C8E3 /* Dismiss.swift in Sources */,
 				3816F51D24055095007479B4 /* Configuration.swift in Sources */,
 				3816F51424049ACE007479B4 /* ProtectionSpace.swift in Sources */,
 				3816F510240496D2007479B4 /* ProtectedRequest.swift in Sources */,
