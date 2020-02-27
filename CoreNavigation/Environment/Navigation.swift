@@ -28,9 +28,11 @@ public class Navigation: ObservableObject {
     private let stack = Stack()
     
     @Published private(set) var currentView: AnyView
-    private(set) var previousView: AnyView?
-    var currentSheet: SheetModifier.ViewModel = .init()
     @Published private(set) var direction: Direction?
+
+    var currentSheet: SheetModifier.ViewModel = .init()
+    
+    private(set) var previousView: AnyView?
     
     init<ViewType: View>(currentView: ViewType) {
         self.currentView = AnyView(currentView.modifier(SheetModifier(viewModel: currentSheet)))
@@ -87,8 +89,21 @@ public class Navigation: ObservableObject {
     }
     
     public func dismiss() {
-        guard let viewModel = self.stack.sheets.popLast() else { return }
+        guard let viewModel = self.stack.sheets.last else { return }
 
+        dismiss(viewModel: viewModel)
+    }
+    
+    func dismiss(viewModel: SheetModifier.ViewModel) {
+        if self.currentSheet === viewModel {
+            return
+        }
+        
+        self.stack.sheets.removeAll { (element) -> Bool in
+            element === viewModel
+        }
+        
+        self.currentSheet = viewModel
         viewModel.isPresented = false
     }
     

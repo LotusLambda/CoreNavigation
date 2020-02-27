@@ -12,7 +12,7 @@ struct SheetModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .sheet(isPresented: self.$viewModel.isPresented, onDismiss: {
-                self.navigation.currentSheet = self.viewModel
+                self.navigation.dismiss(viewModel: self.viewModel)
             }) {
                 self.viewModel.content
             }
