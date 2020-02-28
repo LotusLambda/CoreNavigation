@@ -7,15 +7,25 @@ struct HomeView: View {
     
     var body: some View {
         GeometryReader { (proxy) in
-            Button(action: {
-                self.navigation.request(DestinationColor(color: self.$color))
-                    .animate(.easeInOut(duration: 0.3))
-                    .transition(.move(edge: .top))
-                    .push()
-            }) {
-                Text("Color!")
-            }
-            .frame(width: proxy.size.width, height: proxy.size.height)
+            HStack {
+                Button(action: {
+                    self.navigation.request(DestinationColor(color: self.$color))
+                        .animate(.easeInOut(duration: 0.3))
+                        .transition(.move(edge: .top))
+                        .push()
+                }) {
+                    Text("Color!")
+                }
+                
+                Button(action: {
+                    self.navigation.request(DestinationColor(color: self.$color))
+                        .animate(.easeInOut(duration: 0.3))
+                        .transition(.move(edge: .top))
+                        .push()
+                }) {
+                    Text("Color!")
+                }
+            }.frame(width: proxy.size.width, height: proxy.size.height)
             .background(self.color)
         }
     }

@@ -55,6 +55,52 @@
 		38F0233F2407FA5300B6C8E3 /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */; };
 		38F023412408125100B6C8E3 /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F023402408125100B6C8E3 /* Dismiss.swift */; };
 		38F023432408132700B6C8E3 /* Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F023422408132700B6C8E3 /* Pop.swift */; };
+		38F023512408297F00B6C8E3 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52C24057A91007479B4 /* Routing.swift */; };
+		38F023522408297F00B6C8E3 /* Routing_RouteMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52724057A91007479B4 /* Routing_RouteMatch.swift */; };
+		38F023532408297F00B6C8E3 /* Routing_Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52824057A91007479B4 /* Routing_Route.swift */; };
+		38F023542408297F00B6C8E3 /* Routing_RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52A24057A91007479B4 /* Routing_RegularExpression.swift */; };
+		38F023552408297F00B6C8E3 /* Routing_Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52B24057A91007479B4 /* Routing_Router.swift */; };
+		38F023562408297F00B6C8E3 /* Matchable+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5372405D21B007479B4 /* Matchable+Types.swift */; };
+		38F023572408297F00B6C8E3 /* Request+Protect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F511240499E9007479B4 /* Request+Protect.swift */; };
+		38F023582408297F00B6C8E3 /* Request+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F517240548F4007479B4 /* Request+Transition.swift */; };
+		38F023592408297F00B6C8E3 /* Request+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52224055CBA007479B4 /* Request+Animate.swift */; };
+		38F0235A2408297F00B6C8E3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F51C24055095007479B4 /* Configuration.swift */; };
+		38F0235B2408297F00B6C8E3 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583D0124048B860038FC4C /* Resolver.swift */; };
+		38F0235C2408297F00B6C8E3 /* DestinationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE72404852E0038FC4C /* DestinationRequest.swift */; };
+		38F0235D2408297F00B6C8E3 /* RouteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CF1240488EE0038FC4C /* RouteRequest.swift */; };
+		38F0235E2408297F00B6C8E3 /* ProtectedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F50F240496D2007479B4 /* ProtectedRequest.swift */; };
+		38F0235F2408297F00B6C8E3 /* TransitionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5192405491B007479B4 /* TransitionRequest.swift */; };
+		38F023602408297F00B6C8E3 /* AnimatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F52024055C76007479B4 /* AnimatedRequest.swift */; };
+		38F023612408297F00B6C8E3 /* ViewDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE5240483780038FC4C /* ViewDestination.swift */; };
+		38F023622408297F00B6C8E3 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53524057BD4007479B4 /* Routable.swift */; };
+		38F023632408297F00B6C8E3 /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53324057B24007479B4 /* Matchable.swift */; };
+		38F023642408297F00B6C8E3 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CE22404830A0038FC4C /* Destination.swift */; };
+		38F023652408297F00B6C8E3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CED2404888C0038FC4C /* Request.swift */; };
+		38F023662408297F00B6C8E3 /* ProtectionSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F51324049ACE007479B4 /* ProtectionSpace.swift */; };
+		38F023672408297F00B6C8E3 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F51E24055866007479B4 /* Configurable.swift */; };
+		38F023682408297F00B6C8E3 /* Protectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F524240570E5007479B4 /* Protectable.swift */; };
+		38F023692408297F00B6C8E3 /* AnyDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5392406773A007479B4 /* AnyDestination.swift */; };
+		38F0236A2408297F00B6C8E3 /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */; };
+		38F0236B2408297F00B6C8E3 /* NavigationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CBD24047FFD0038FC4C /* NavigationContainer.swift */; };
+		38F0236C2408297F00B6C8E3 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53B24069342007479B4 /* Route.swift */; };
+		38F0236D2408297F00B6C8E3 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F53F24069D69007479B4 /* Link.swift */; };
+		38F0236E2408297F00B6C8E3 /* Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F023402408125100B6C8E3 /* Dismiss.swift */; };
+		38F0236F2408297F00B6C8E3 /* Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F023422408132700B6C8E3 /* Pop.swift */; };
+		38F023702408297F00B6C8E3 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5412406BA91007479B4 /* ViewControllerWrapper.swift */; };
+		38F023712408297F00B6C8E3 /* ViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5452406C30C007479B4 /* ViewWrapper.swift */; };
+		38F023722408297F00B6C8E3 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CC0240480810038FC4C /* Navigation.swift */; };
+		38F0237A24082AC200B6C8E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0237924082AC200B6C8E3 /* AppDelegate.swift */; };
+		38F0237E24082AC400B6C8E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F0237D24082AC400B6C8E3 /* Assets.xcassets */; };
+		38F0238124082AC400B6C8E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F0238024082AC400B6C8E3 /* Preview Assets.xcassets */; };
+		38F0238424082AC400B6C8E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F0238224082AC400B6C8E3 /* LaunchScreen.storyboard */; };
+		38F0238924082B2D00B6C8E3 /* CoreNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F023492408294000B6C8E3 /* CoreNavigation.framework */; };
+		38F0238A24082B2D00B6C8E3 /* CoreNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F023492408294000B6C8E3 /* CoreNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38F0238E24082B6300B6C8E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CCC240481530038FC4C /* ContentView.swift */; };
+		38F0238F24082B6300B6C8E3 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5432406BF0C007479B4 /* OrangeViewController.swift */; };
+		38F0239024082B6300B6C8E3 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5472406C3C5007479B4 /* BlueView.swift */; };
+		38F0239124082B6300B6C8E3 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F54B2406CE9B007479B4 /* ColorView.swift */; };
+		38F0239224082B6300B6C8E3 /* DestinationColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5492406CE94007479B4 /* DestinationColor.swift */; };
+		38F0239324082B6300B6C8E3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F54D2406CF4C007479B4 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +110,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 38583CB024047FC80038FC4C;
 			remoteInfo = CoreNavigation;
+		};
+		38F0238B24082B2D00B6C8E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38583CA824047FC80038FC4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38F023482408294000B6C8E3;
+			remoteInfo = "tvOS CoreNavigation";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -75,6 +128,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				38583CDC2404815A0038FC4C /* CoreNavigation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F0238D24082B2D00B6C8E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				38F0238A24082B2D00B6C8E3 /* CoreNavigation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +197,14 @@
 		38F0233E2407FA5300B6C8E3 /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
 		38F023402408125100B6C8E3 /* Dismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismiss.swift; sourceTree = "<group>"; };
 		38F023422408132700B6C8E3 /* Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop.swift; sourceTree = "<group>"; };
+		38F023492408294000B6C8E3 /* CoreNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F0237724082AC200B6C8E3 /* TVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F0237924082AC200B6C8E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38F0237D24082AC400B6C8E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38F0238024082AC400B6C8E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38F0238324082AC400B6C8E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38F0238524082AC400B6C8E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38F023942409121C00B6C8E3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +220,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				38583CDB2404815A0038FC4C /* CoreNavigation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F023462408294000B6C8E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F0237424082AC200B6C8E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F0238924082B2D00B6C8E3 /* CoreNavigation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +264,10 @@
 		38583CA724047FC80038FC4C = {
 			isa = PBXGroup;
 			children = (
+				38F023942409121C00B6C8E3 /* Package.swift */,
 				38583CB324047FC80038FC4C /* CoreNavigation */,
 				38583CC7240481530038FC4C /* HostApp */,
+				38F0237824082AC200B6C8E3 /* TVApp */,
 				38583CB224047FC80038FC4C /* Products */,
 				38583CDA2404815A0038FC4C /* Frameworks */,
 			);
@@ -189,6 +278,8 @@
 			children = (
 				38583CB124047FC80038FC4C /* CoreNavigation.framework */,
 				38583CC6240481530038FC4C /* HostApp.app */,
+				38F023492408294000B6C8E3 /* CoreNavigation.framework */,
+				38F0237724082AC200B6C8E3 /* TVApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +438,26 @@
 			path = Modifier;
 			sourceTree = "<group>";
 		};
+		38F0237824082AC200B6C8E3 /* TVApp */ = {
+			isa = PBXGroup;
+			children = (
+				38F0237924082AC200B6C8E3 /* AppDelegate.swift */,
+				38F0237D24082AC400B6C8E3 /* Assets.xcassets */,
+				38F0238224082AC400B6C8E3 /* LaunchScreen.storyboard */,
+				38F0238524082AC400B6C8E3 /* Info.plist */,
+				38F0237F24082AC400B6C8E3 /* Preview Content */,
+			);
+			path = TVApp;
+			sourceTree = "<group>";
+		};
+		38F0237F24082AC400B6C8E3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				38F0238024082AC400B6C8E3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -358,12 +469,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38F023442408294000B6C8E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		38583CB024047FC80038FC4C /* CoreNavigation */ = {
+		38583CB024047FC80038FC4C /* iOS CoreNavigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38583CB924047FC80038FC4C /* Build configuration list for PBXNativeTarget "CoreNavigation" */;
+			buildConfigurationList = 38583CB924047FC80038FC4C /* Build configuration list for PBXNativeTarget "iOS CoreNavigation" */;
 			buildPhases = (
 				38583CAC24047FC80038FC4C /* Headers */,
 				38583CAD24047FC80038FC4C /* Sources */,
@@ -374,7 +492,7 @@
 			);
 			dependencies = (
 			);
-			name = CoreNavigation;
+			name = "iOS CoreNavigation";
 			productName = CoreNavigation;
 			productReference = 38583CB124047FC80038FC4C /* CoreNavigation.framework */;
 			productType = "com.apple.product-type.framework";
@@ -398,6 +516,43 @@
 			productReference = 38583CC6240481530038FC4C /* HostApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		38F023482408294000B6C8E3 /* tvOS CoreNavigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38F0234E2408294000B6C8E3 /* Build configuration list for PBXNativeTarget "tvOS CoreNavigation" */;
+			buildPhases = (
+				38F023442408294000B6C8E3 /* Headers */,
+				38F023452408294000B6C8E3 /* Sources */,
+				38F023462408294000B6C8E3 /* Frameworks */,
+				38F023472408294000B6C8E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tvOS CoreNavigation";
+			productName = "tvOS CoreNavigation";
+			productReference = 38F023492408294000B6C8E3 /* CoreNavigation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		38F0237624082AC200B6C8E3 /* TVApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38F0238624082AC400B6C8E3 /* Build configuration list for PBXNativeTarget "TVApp" */;
+			buildPhases = (
+				38F0237324082AC200B6C8E3 /* Sources */,
+				38F0237424082AC200B6C8E3 /* Frameworks */,
+				38F0237524082AC200B6C8E3 /* Resources */,
+				38F0238D24082B2D00B6C8E3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38F0238C24082B2D00B6C8E3 /* PBXTargetDependency */,
+			);
+			name = TVApp;
+			productName = TVApp;
+			productReference = 38F0237724082AC200B6C8E3 /* TVApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -415,6 +570,12 @@
 					38583CC5240481530038FC4C = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					38F023482408294000B6C8E3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					38F0237624082AC200B6C8E3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 38583CAB24047FC80038FC4C /* Build configuration list for PBXProject "CoreNavigation" */;
@@ -430,8 +591,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38583CB024047FC80038FC4C /* CoreNavigation */,
+				38583CB024047FC80038FC4C /* iOS CoreNavigation */,
 				38583CC5240481530038FC4C /* HostApp */,
+				38F023482408294000B6C8E3 /* tvOS CoreNavigation */,
+				38F0237624082AC200B6C8E3 /* TVApp */,
 			);
 		};
 /* End PBXProject section */
@@ -451,6 +614,23 @@
 				38583CD5240481540038FC4C /* LaunchScreen.storyboard in Resources */,
 				38583CD2240481540038FC4C /* Preview Assets.xcassets in Resources */,
 				38583CCF240481540038FC4C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F023472408294000B6C8E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F0237524082AC200B6C8E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F0238424082AC400B6C8E3 /* LaunchScreen.storyboard in Resources */,
+				38F0238124082AC400B6C8E3 /* Preview Assets.xcassets in Resources */,
+				38F0237E24082AC400B6C8E3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,13 +693,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38F023452408294000B6C8E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F023532408297F00B6C8E3 /* Routing_Route.swift in Sources */,
+				38F023562408297F00B6C8E3 /* Matchable+Types.swift in Sources */,
+				38F0236A2408297F00B6C8E3 /* SheetModifier.swift in Sources */,
+				38F0236D2408297F00B6C8E3 /* Link.swift in Sources */,
+				38F023712408297F00B6C8E3 /* ViewWrapper.swift in Sources */,
+				38F023642408297F00B6C8E3 /* Destination.swift in Sources */,
+				38F023662408297F00B6C8E3 /* ProtectionSpace.swift in Sources */,
+				38F0236C2408297F00B6C8E3 /* Route.swift in Sources */,
+				38F023692408297F00B6C8E3 /* AnyDestination.swift in Sources */,
+				38F0235D2408297F00B6C8E3 /* RouteRequest.swift in Sources */,
+				38F023652408297F00B6C8E3 /* Request.swift in Sources */,
+				38F023592408297F00B6C8E3 /* Request+Animate.swift in Sources */,
+				38F0235B2408297F00B6C8E3 /* Resolver.swift in Sources */,
+				38F023582408297F00B6C8E3 /* Request+Transition.swift in Sources */,
+				38F023682408297F00B6C8E3 /* Protectable.swift in Sources */,
+				38F023522408297F00B6C8E3 /* Routing_RouteMatch.swift in Sources */,
+				38F023622408297F00B6C8E3 /* Routable.swift in Sources */,
+				38F023632408297F00B6C8E3 /* Matchable.swift in Sources */,
+				38F023552408297F00B6C8E3 /* Routing_Router.swift in Sources */,
+				38F0236E2408297F00B6C8E3 /* Dismiss.swift in Sources */,
+				38F023612408297F00B6C8E3 /* ViewDestination.swift in Sources */,
+				38F0235E2408297F00B6C8E3 /* ProtectedRequest.swift in Sources */,
+				38F0236F2408297F00B6C8E3 /* Pop.swift in Sources */,
+				38F023702408297F00B6C8E3 /* ViewControllerWrapper.swift in Sources */,
+				38F0235A2408297F00B6C8E3 /* Configuration.swift in Sources */,
+				38F023722408297F00B6C8E3 /* Navigation.swift in Sources */,
+				38F0235F2408297F00B6C8E3 /* TransitionRequest.swift in Sources */,
+				38F023572408297F00B6C8E3 /* Request+Protect.swift in Sources */,
+				38F023602408297F00B6C8E3 /* AnimatedRequest.swift in Sources */,
+				38F023512408297F00B6C8E3 /* Routing.swift in Sources */,
+				38F0235C2408297F00B6C8E3 /* DestinationRequest.swift in Sources */,
+				38F0236B2408297F00B6C8E3 /* NavigationContainer.swift in Sources */,
+				38F023672408297F00B6C8E3 /* Configurable.swift in Sources */,
+				38F023542408297F00B6C8E3 /* Routing_RegularExpression.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F0237324082AC200B6C8E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F0239124082B6300B6C8E3 /* ColorView.swift in Sources */,
+				38F0238F24082B6300B6C8E3 /* OrangeViewController.swift in Sources */,
+				38F0239224082B6300B6C8E3 /* DestinationColor.swift in Sources */,
+				38F0237A24082AC200B6C8E3 /* AppDelegate.swift in Sources */,
+				38F0239324082B6300B6C8E3 /* HomeView.swift in Sources */,
+				38F0238E24082B6300B6C8E3 /* ContentView.swift in Sources */,
+				38F0239024082B6300B6C8E3 /* BlueView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		38583CDE2404815A0038FC4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38583CB024047FC80038FC4C /* CoreNavigation */;
+			target = 38583CB024047FC80038FC4C /* iOS CoreNavigation */;
 			targetProxy = 38583CDD2404815A0038FC4C /* PBXContainerItemProxy */;
+		};
+		38F0238C24082B2D00B6C8E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38F023482408294000B6C8E3 /* tvOS CoreNavigation */;
+			targetProxy = 38F0238B24082B2D00B6C8E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -528,6 +768,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				38583CD4240481540038FC4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		38F0238224082AC400B6C8E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38F0238324082AC400B6C8E3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -673,7 +921,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.CoreNavigation;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = CoreNavigation;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -699,7 +947,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.CoreNavigation;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = CoreNavigation;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -752,6 +1000,102 @@
 			};
 			name = Release;
 		};
+		38F0234F2408294000B6C8E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4W64BNS34B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoreNavigation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.CoreNavigation;
+				PRODUCT_NAME = CoreNavigation;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		38F023502408294000B6C8E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4W64BNS34B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoreNavigation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.CoreNavigation;
+				PRODUCT_NAME = CoreNavigation;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Release;
+		};
+		38F0238724082AC400B6C8E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TVApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 4W64BNS34B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TVApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.TVApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		38F0238824082AC400B6C8E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TVApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 4W64BNS34B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TVApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.TVApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -764,7 +1108,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38583CB924047FC80038FC4C /* Build configuration list for PBXNativeTarget "CoreNavigation" */ = {
+		38583CB924047FC80038FC4C /* Build configuration list for PBXNativeTarget "iOS CoreNavigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38583CBA24047FC80038FC4C /* Debug */,
@@ -778,6 +1122,24 @@
 			buildConfigurations = (
 				38583CD8240481540038FC4C /* Debug */,
 				38583CD9240481540038FC4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38F0234E2408294000B6C8E3 /* Build configuration list for PBXNativeTarget "tvOS CoreNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38F0234F2408294000B6C8E3 /* Debug */,
+				38F023502408294000B6C8E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38F0238624082AC400B6C8E3 /* Build configuration list for PBXNativeTarget "TVApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38F0238724082AC400B6C8E3 /* Debug */,
+				38F0238824082AC400B6C8E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

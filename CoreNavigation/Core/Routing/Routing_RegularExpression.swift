@@ -1,3 +1,5 @@
+import Foundation
+
 private let NamedGroupComponentPattern = ":[a-zA-Z0-9-_][^/]+"
 private let ParameterPattern = ":[a-zA-Z0-9-_]+"
 private let URLParameterPattern = "([^/]+)"

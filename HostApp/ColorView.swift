@@ -7,39 +7,23 @@ struct ColorView: View {
     
     var body: some View {
         GeometryReader { (proxy) in
-            ZStack {
-                self.color.frame(width: proxy.size.width, height: proxy.size.height)
-                    
-                HStack {
-                    Pop {
-                        Text("Pop!")
-                    }
-                    
-                    Dismiss {
-                        Text("Dismiss!")
-                    }
-                    
-                    Button(action: {
-                        self.navigation.request(DestinationColor(color: self.$color)).sheet()
-                    }, label: {
-                        Text("Sheet!")
-                    })
-
-                    VStack {
-                        Button(action: {
-                            self.color = .blue
-                        }, label: {
-                            Text("Blue")
-                        })
-                        
-                        Button(action: {
-                            self.color = .orange
-                        }, label: {
-                            Text("Orange")
-                        })
-                    }
+            HStack {
+                Button(action: {
+                    self.navigation.request(DestinationColor(color: self.$color)).sheet()
+                }, label: {
+                    Text("Sheet!")
+                }).focusable(true)
+                
+                Pop {
+                    Text("Pop!")
+                }
+                
+                Dismiss {
+                    Text("Dismiss!")
                 }
             }
+            .frame(width: proxy.size.width, height: proxy.size.height)
+            .background(self.color)
         }
     }
 }
