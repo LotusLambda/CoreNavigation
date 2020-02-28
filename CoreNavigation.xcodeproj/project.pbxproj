@@ -204,7 +204,7 @@
 		38F0238024082AC400B6C8E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38F0238324082AC400B6C8E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38F0238524082AC400B6C8E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38F023942409121C00B6C8E3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		38F0239A24091DF400B6C8E3 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,7 +264,7 @@
 		38583CA724047FC80038FC4C = {
 			isa = PBXGroup;
 			children = (
-				38F023942409121C00B6C8E3 /* Package.swift */,
+				38F0239A24091DF400B6C8E3 /* Package.swift */,
 				38583CB324047FC80038FC4C /* CoreNavigation */,
 				38583CC7240481530038FC4C /* HostApp */,
 				38F0237824082AC200B6C8E3 /* TVApp */,
