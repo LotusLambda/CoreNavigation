@@ -24,7 +24,7 @@ public struct RouteRequest: Request {
             
             try match.destinationType.resolveDestination(route: route, destination: { (destination) in
                 CoreNavigation.protect(destination: destination, continue: {
-                    destination.resolveTarget(for: route, with: .init(route: route, onComplete: { (view) in
+                    destination.resolveView(for: route, with: .init(route: route, onComplete: { (view) in
                         self.navigation.push(view: view, configuration: self.configuration)
                     }, onError: { (error) in
                         fatalError()

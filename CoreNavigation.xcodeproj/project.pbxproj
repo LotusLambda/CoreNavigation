@@ -35,6 +35,7 @@
 		3816F54A2406CE94007479B4 /* DestinationColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F5492406CE94007479B4 /* DestinationColor.swift */; };
 		3816F54C2406CE9B007479B4 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F54B2406CE9B007479B4 /* ColorView.swift */; };
 		3816F54E2406CF4C007479B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3816F54D2406CF4C007479B4 /* HomeView.swift */; };
+		383AFB7B24114FA2004633BC /* Destination+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383AFB7A24114FA2004633BC /* Destination+View.swift */; };
 		38583CB624047FC80038FC4C /* CoreNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38583CB424047FC80038FC4C /* CoreNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38583CBE24047FFD0038FC4C /* NavigationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CBD24047FFD0038FC4C /* NavigationContainer.swift */; };
 		38583CC1240480810038FC4C /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38583CC0240480810038FC4C /* Navigation.swift */; };
@@ -174,6 +175,7 @@
 		3816F5492406CE94007479B4 /* DestinationColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationColor.swift; sourceTree = "<group>"; };
 		3816F54B2406CE9B007479B4 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		3816F54D2406CF4C007479B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		383AFB7A24114FA2004633BC /* Destination+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Destination+View.swift"; sourceTree = "<group>"; };
 		38583CB124047FC80038FC4C /* CoreNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38583CB424047FC80038FC4C /* CoreNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreNavigation.h; sourceTree = "<group>"; };
 		38583CB524047FC80038FC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				3816F511240499E9007479B4 /* Request+Protect.swift */,
 				3816F517240548F4007479B4 /* Request+Transition.swift */,
 				3816F52224055CBA007479B4 /* Request+Animate.swift */,
+				383AFB7A24114FA2004633BC /* Destination+View.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				3816F53C24069342007479B4 /* Route.swift in Sources */,
 				3816F52E24057A91007479B4 /* Routing_Route.swift in Sources */,
 				3816F53024057A91007479B4 /* Routing_RegularExpression.swift in Sources */,
+				383AFB7B24114FA2004633BC /* Destination+View.swift in Sources */,
 				3816F518240548F4007479B4 /* Request+Transition.swift in Sources */,
 				3816F51F24055866007479B4 /* Configurable.swift in Sources */,
 				3816F53A2406773A007479B4 /* AnyDestination.swift in Sources */,

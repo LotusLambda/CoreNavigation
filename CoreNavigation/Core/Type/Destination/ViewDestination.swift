@@ -7,7 +7,7 @@ public struct ViewDestination<ViewType: View> : Destination {
         self.content = content
     }
     
-    public func resolveTarget(with resolver: Resolver<ViewType>) {
+    public func resolveView(with resolver: Resolver<ViewType>) {
         resolver.complete(content())
     }
 }

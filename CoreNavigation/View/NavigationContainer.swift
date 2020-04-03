@@ -3,37 +3,39 @@ import SwiftUI
 public struct NavigationContainer<Content> : View where Content : View {
     @ObservedObject var navigation: Navigation
     
+    public init(navigation: Navigation) {
+        self.navigation = navigation
+    }
+    
     public init(@ViewBuilder _ content: @escaping () -> Content) {
-        self.navigation = Navigation(currentView: content())
+        self.navigation = Navigation(rootView: content())
     }
     
     public var body: some View {
         GeometryReader { (proxy) in
-            ZStack {
-                if self.navigation.direction == .forward {
-                    self.navigation.previousView?
-                        .environmentObject(self.navigation)
-                        .zIndex(0)
-                        .frame(width: proxy.size.width, height: proxy.size.height)
-                        .disabled(true)
-                    self.navigation.currentView
-                        .environmentObject(self.navigation)
-                        .zIndex(1)
-                        .frame(width: proxy.size.width, height: proxy.size.height)
-                        .shadow(color: Color.black.opacity(0.15), radius: 30, x: 0, y: 0)
-                        .disabled(false)
-                } else if self.navigation.direction == .backward {
-                    self.navigation.currentView
-                        .environmentObject(self.navigation)
-                        .zIndex(0)
-                        .frame(width: proxy.size.width, height: proxy.size.height)
-                        .disabled(false)
-                } else {
-                    self.navigation.currentView
-                        .environmentObject(self.navigation)
-                        .disabled(false)
-                }
-            }
+            if self.navigation.direction == .forward {
+//                                self.navigation.previousView?
+//                                    .environmentObject(self.navigation)
+//                                    .frame(width: proxy.size.width, height: proxy.size.height)
+//                                    .disabled(true)
+//                                    .zIndex(0)
+                                self.navigation.currentView
+                                    .environmentObject(self.navigation)
+                                    .frame(width: proxy.size.width, height: proxy.size.height)
+                                    .disabled(false)
+                                    .zIndex(1)
+                            } else if self.navigation.direction == .backward {
+                                self.navigation.currentView
+                                    .environmentObject(self.navigation)
+                                    .frame(width: proxy.size.width, height: proxy.size.height)
+                                    .disabled(false)
+                                    .zIndex(0)
+                            } else {
+                                self.navigation.currentView
+                                    .environmentObject(self.navigation)
+                                    .disabled(false)
+                                    .zIndex(1)
+                            }
         }
         .environmentObject(self.navigation)
     }

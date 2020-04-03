@@ -33,10 +33,10 @@ public class Navigation: ObservableObject {
     private(set) var currentView: AnyView
     private(set) var previousView: AnyView?
     
-    init<ViewType: View>(currentView: ViewType) {
+    public init<ViewType: View>(rootView: ViewType) {
         let currentSheet = SheetModifier.ViewModel()
         self.currentSheet = currentSheet
-        self.currentView = AnyView(currentView.modifier(SheetModifier(viewModel: currentSheet)))
+        self.currentView = AnyView(rootView.modifier(SheetModifier(viewModel: currentSheet)))
     }
 
     public func push<ViewType: View>(view: ViewType) {

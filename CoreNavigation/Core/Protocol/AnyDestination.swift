@@ -2,11 +2,11 @@ import SwiftUI
 
 public protocol AnyDestination {
     static func resolveDestination(route: Routing.Route, destination: @escaping (Self) -> Void, failure: @escaping (Error) -> Void) throws
-    func resolveTarget(for route: Routing.Route, with resolver: Resolver<AnyView>)
+    func resolveView(for route: Routing.Route, with resolver: Resolver<AnyView>)
 }
 
 extension AnyDestination {
-    public func resolveTarget(for route: Routing.Route, with resolver: Resolver<AnyView>) {
+    public func resolveView(for route: Routing.Route, with resolver: Resolver<AnyView>) {
         fatalError("Implement this method if your target view does not conform to `Routed`")
     }
     public static func resolveDestination(route: Routing.Route, destination: @escaping (Self) -> Void, failure: @escaping (Error) -> Void) throws {
@@ -21,8 +21,8 @@ extension AnyDestination where Self: Routed {
 }
 
 extension Destination {
-    public func resolveTarget(for route: Routing.Route, with resolver: Resolver<AnyView>) {
-        self.resolveTarget(with: .init(route: route, onComplete: { (view) in
+    public func resolveView(for route: Routing.Route, with resolver: Resolver<AnyView>) {
+        self.resolveView(with: .init(route: route, onComplete: { (view) in
             resolver.complete(AnyView(view))
         }, onError: { (error) in
             resolver.error(error)
@@ -31,7 +31,7 @@ extension Destination {
 }
 
 extension Destination where ViewType: Routed {
-    public func resolveTarget(with resolver: Resolver<ViewType>) {
+    public func resolveView(with resolver: Resolver<ViewType>) {
         if let route = resolver.route {
             do {
                 resolver.complete(try .init(route: route))

@@ -7,7 +7,7 @@ public struct DestinationRequest<DestinationType: Destination>: Request {
     
     public func push() {
         CoreNavigation.protect(destination: destination, continue: {
-            self.resolveTarget({ view in
+            self.resolveView({ view in
                 self.navigation.push(view: view, configuration: self.configuration)
             }) { (error) in
                 fatalError()
@@ -19,7 +19,7 @@ public struct DestinationRequest<DestinationType: Destination>: Request {
     
     public func sheet() {
         CoreNavigation.protect(destination: destination, continue: {
-            self.resolveTarget({ (view) in
+            self.resolveView({ (view) in
                 self.navigation.sheet(view: view, configuration: self.configuration)
             }) { (error) in
                 fatalError()
@@ -29,7 +29,7 @@ public struct DestinationRequest<DestinationType: Destination>: Request {
         }
     }
     
-    private func resolveTarget(_ onComplete: @escaping (DestinationType.ViewType) -> Void, onError: @escaping (Error) -> Void) {
-        destination.resolveTarget(with: Resolver<DestinationType.ViewType>(route: nil, onComplete: onComplete, onError: onError))
+    private func resolveView(_ onComplete: @escaping (DestinationType.ViewType) -> Void, onError: @escaping (Error) -> Void) {
+        destination.resolveView(with: Resolver<DestinationType.ViewType>(route: nil, onComplete: onComplete, onError: onError))
     }
 }
