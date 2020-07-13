@@ -10,12 +10,13 @@ extension Navigation.Builder.To {
 
         return self
     }
-
-    @discardableResult public func transition<ToType: UIViewController>(with transitionDuration: TimeInterval, _ block: @escaping (Transitioning.Context<FromType, ToType>) -> Void) -> Self {
+    
+    @discardableResult public func transition<ToType: UIViewController, PresentationControllerType: UIPresentationController>(with transitionDuration: TimeInterval, presentationControllerClass: PresentationControllerType.Type?, _ block: @escaping (Transitioning.Context<FromType, ToType>) -> Void) -> Self {
         queue.sync {
             configuration.transitioningDelegateBlock = {
                 Transitioning.Delegate(
                     transitionDuration: transitionDuration,
+                    presentationControllerClass: presentationControllerClass,
                     transitionAnimation: block)
             }
         }

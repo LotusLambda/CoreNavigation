@@ -15,8 +15,11 @@ extension Navigator {
             var transitioningDelegate = self.configuration.transitioningDelegateBlock?()
             let sourceViewController = self.configuration.sourceViewController
             
-            destinationViewController.modalPresentationStyle = self.configuration.modalPresentationStyleBlock()
-            destinationViewController.modalTransitionStyle = self.configuration.modalTransitionStyleBlock()
+            let modalPresentationStyle = self.configuration.modalPresentationStyleBlock()
+            let modalTransitionStyle = self.configuration.modalTransitionStyleBlock()
+            
+            destinationViewController.modalPresentationStyle = modalPresentationStyle
+            destinationViewController.modalTransitionStyle = modalTransitionStyle
             if
                 #available(iOS 13, *),
                 let isModalInPresentationBlock = self.configuration.isModalInPresentationBlock
@@ -26,12 +29,13 @@ extension Navigator {
             
             func action() {
                 destinationViewController.transitioningDelegate = transitioningDelegate
-            
+                
                 if sourceViewController is AnyDataReceivable {
                     let dataManager = UIViewController.DataManager()
                     dataManager.blocks.addObjects(from: self.configuration.dataReturningBlocks)
                     sourceViewController.coreNavigationDataManager = dataManager
                 }
+                
                 
                 sourceViewController.present(destinationViewController, animated: self.configuration.isAnimatedBlock(), completion: {
                     self.resultCompletion(with: result, operation: operation)

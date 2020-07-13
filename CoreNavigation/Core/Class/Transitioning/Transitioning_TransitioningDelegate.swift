@@ -1,14 +1,17 @@
 extension Transitioning {
     class Delegate<FromViewControllerType: UIViewController, ToViewControllerType: UIViewController>: NSObject, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
         let transitionDuration: TimeInterval
+        let presentationControllerClass: UIPresentationController.Type?
         let transitionAnimation: (Transitioning.Context<FromViewControllerType, ToViewControllerType>) -> Void
-
+        
         var fromViewController: FromViewControllerType?
         var toViewController: ToViewControllerType?
         var presentingViewController: UIViewController?
+        var dismissedViewController: UIViewController?
 
-        init(transitionDuration: TimeInterval, transitionAnimation: @escaping (Transitioning.Context<FromViewControllerType, ToViewControllerType>) -> Void) {
+        init(transitionDuration: TimeInterval, presentationControllerClass: UIPresentationController.Type?, transitionAnimation: @escaping (Transitioning.Context<FromViewControllerType, ToViewControllerType>) -> Void) {
             self.transitionDuration = transitionDuration
+            self.presentationControllerClass = presentationControllerClass
             self.transitionAnimation = transitionAnimation
             super.init()
         }
@@ -25,6 +28,12 @@ extension Transitioning {
             self.toViewController = toViewController
             self.presentingViewController = presenting
 
+            return self
+        }
+
+        func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+            self.dismissedViewController = dismissed
+            
             return self
         }
 
@@ -51,6 +60,14 @@ extension Transitioning {
             )
 
             transitionAnimation(context)
+        }
+        
+        func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+            if let presentationControllerClass = self.presentationControllerClass {
+                return presentationControllerClass.init(presentedViewController: presented, presenting: presenting)
+            }
+            
+            return nil
         }
     }
 

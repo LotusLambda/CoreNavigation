@@ -3,11 +3,11 @@ extension Destination {
         Navigate(navigationType, { to($0.to(self)) })
     }
 
-    public func present<FromType: UIViewController>(_ to: (Navigation.Builder.To<Self, FromType>.Present) -> Navigation.Builder.To<Self, FromType>.Present) -> Navigation.Operation {
+    @discardableResult public func present<FromType: UIViewController>(_ to: (Navigation.Builder.To<Self, FromType>.Present) -> Navigation.Builder.To<Self, FromType>.Present) -> Navigation.Operation {
         navigate(.present, to)
     }
     
-    public func present(animated: Bool = true, completion: ((Navigation.Result<Self, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
+    @discardableResult public func present(animated: Bool = true, completion: ((Navigation.Result<Self, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
         present { $0
             .animated(animated)
             .onComplete({ (result) in
@@ -16,11 +16,11 @@ extension Destination {
         }
     }
 
-    public func push<FromType: UIViewController>(_ to: (Navigation.Builder.To<Self, FromType>.Push) -> Navigation.Builder.To<Self, FromType>.Push) -> Navigation.Operation {
+    @discardableResult public func push<FromType: UIViewController>(_ to: (Navigation.Builder.To<Self, FromType>.Push) -> Navigation.Builder.To<Self, FromType>.Push) -> Navigation.Operation {
         navigate(.push, to)
     }
     
-    public func push(animated: Bool = true, completion: ((Navigation.Result<Self, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
+    @discardableResult public func push(animated: Bool = true, completion: ((Navigation.Result<Self, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
         push { $0
             .animated(animated)
             .onComplete({ (result) in
