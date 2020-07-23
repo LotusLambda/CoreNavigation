@@ -45,5 +45,9 @@ extension Routing {
                 resolver.cancel(with: error)
             }
         }
+        
+        public func didResolve(viewController: UIViewController) {
+            resolvedDestination?.didResolve(viewController: viewController)
+        }
     }
 }
