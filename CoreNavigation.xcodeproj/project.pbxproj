@@ -1415,7 +1415,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hr.forensic.CoreNavigation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.CoreNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1442,7 +1442,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hr.forensic.CoreNavigation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotuslambda.CoreNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

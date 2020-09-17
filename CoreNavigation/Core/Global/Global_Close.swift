@@ -18,9 +18,18 @@
         .visibleViewController()
         .animated(animated)
         .onComplete({ (fromViewController, toViewController) in
+            completion?(fromViewController as! FromViewControllerType, toViewController as! ToViewControllerType)
+        })
+    }
+    /*
+    Close(navigationType) { $0
+        .visibleViewController()
+        .animated(animated)
+        .onComplete({ (fromViewController, toViewController) in
             completion?(fromViewController, toViewController)
         })
     }
+ */
 }
 
 /// Closes given `UIViewController` instance with given navigation type.
@@ -35,7 +44,7 @@
         .viewController(viewController)
         .animated(animated)
         .onComplete({ (fromViewController, toViewController) in
-            completion?(fromViewController, toViewController)
+            completion?(fromViewController, toViewController as! ToViewControllerType)
         })
     }
 }
