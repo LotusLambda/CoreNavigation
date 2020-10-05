@@ -5,15 +5,13 @@ let operationQueue: OperationQueue = {
 }()
 
 class Navigator<DestinationType: Destination, FromType: UIViewController> {
-    let queue: DispatchQueue
     let configuration: Configuration<DestinationType, FromType>
     
     let cache = Caching.Cache.instance
 
-    init(queue: DispatchQueue, configuration: Configuration<DestinationType, FromType>) {
+    init(configuration: Configuration<DestinationType, FromType>) {
         initFramework
 
-        self.queue = queue
         self.configuration = configuration
     }
 
@@ -87,6 +85,8 @@ class Navigator<DestinationType: Destination, FromType: UIViewController> {
                 self.resultFailure(with: error, operation: operation)
             })
         }
+        
+        print("Count", operationQueue.operations.count)
         
         operationQueue.addOperation(operation)
         

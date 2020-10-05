@@ -22,7 +22,7 @@ extension Navigator {
             self.cache.addItem(with: cacheIdentifier, viewController: viewController, embeddingViewController: embeddingViewController)
         }
         cacheable.didCache(with: Caching.Context(cacheIdentifier: cacheIdentifier, onInvalidateBlock: {
-            self.queue.sync {
+            queue.sync {
                 self.cache.removeItem(with: cacheIdentifier)
             }
         }))

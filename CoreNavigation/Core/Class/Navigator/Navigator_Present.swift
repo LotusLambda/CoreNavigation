@@ -36,7 +36,6 @@ extension Navigator {
                     sourceViewController.coreNavigationDataManager = dataManager
                 }
                 
-                
                 sourceViewController.present(destinationViewController, animated: self.configuration.isAnimatedBlock(), completion: {
                     self.resultCompletion(with: result, operation: operation)
                     transitioningDelegate = nil

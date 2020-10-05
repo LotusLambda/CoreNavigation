@@ -8,7 +8,7 @@ extension Navigator {
         potentialDataReceivables.forEach { (dataReceivable) in
             queue.sync {
                 block(DataPassing.Context<Any?>(onPassData: { data in
-                    self.queue.sync {
+                    queue.sync {
                         dataReceivable.didReceiveAnyData(data)
                         if let viewController = dataReceivable as? UIViewController {
                             viewController.coreNavigationDataManager?.blocks.compactMap({ (element) -> ((Any?, UIViewController) -> Void)? in

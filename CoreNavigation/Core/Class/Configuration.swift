@@ -35,6 +35,7 @@ public class Configuration<DestinationType: Destination, FromType: UIViewControl
     var embeddable: Embeddable?
     var cachingBlock: CachingBlock?
     var stateRestorationBlock: StateRestorationBlock?
+    var isExplicit = false
     var prepareForSegueBlock: PrepareForSegueBlock?
     var delayBlock: DelayBlock?
     var modalPresentationStyleBlock: ModalPresentationStyleBlock = {
