@@ -9,14 +9,12 @@ extension Navigation.Builder.To.Present {
         self.modalPresentationStyle { modalPresentationStyle }
     }
     
-    @available(iOS 13, *)
     @discardableResult public func isModalInPresentation(_ block: @escaping () -> Bool) -> Self {
         queue.sync { configuration.isModalInPresentationBlock = block }
         
         return self
     }
     
-    @available(iOS 13, *)
     @discardableResult public func isModalInPresentation(_ isModalInPresentation: Bool) -> Self {
         self.isModalInPresentation { isModalInPresentation }
     }
