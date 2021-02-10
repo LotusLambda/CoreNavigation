@@ -3,8 +3,11 @@ precedencegroup OperationChaining {
 }
 infix operator ==> : OperationChaining
 
-@discardableResult public func ==><T: Navigation.Operation>(lhs: T, rhs: T) -> T {
-    rhs.addDependency(lhs)
+@discardableResult public func ==><T: Navigation.Operation>(lhs: T?, rhs: T?) -> T? {
+    if let lhs = lhs {
+        rhs?.addDependency(lhs)
+    }
+    
     return rhs
 }
 
