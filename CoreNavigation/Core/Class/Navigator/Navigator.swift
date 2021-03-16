@@ -86,7 +86,10 @@ class Navigator<DestinationType: Destination, FromType: UIViewController> {
             })
         }
         
-        print("Count", operationQueue.operations.count)
+        // All navigation operations must finish in 1 second
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            operationQueue.cancelAllOperations()
+        }
         
         operationQueue.addOperation(operation)
         
