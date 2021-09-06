@@ -1,3 +1,5 @@
+import UIKit
+
 /// Dismisses visible `UIViewController` instance.
 ///
 /// - Parameters:

@@ -1,3 +1,5 @@
+import UIKit
+
 extension Embedding.Embedder {
     class PageViewController: Embeddable {
         let pageViewControllerType: UIPageViewController.Type

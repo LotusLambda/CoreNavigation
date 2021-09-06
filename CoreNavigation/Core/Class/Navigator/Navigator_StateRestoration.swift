@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigator {
     func prepareForStateRestorationIfNeeded(
         viewController: UIViewController,

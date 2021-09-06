@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation {
     public class To<BuildableType: Buildable> {
         private let navigationType: Navigation.Direction

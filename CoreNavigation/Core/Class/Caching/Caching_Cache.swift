@@ -1,3 +1,5 @@
+import UIKit
+
 extension Caching {
     class Cache {
         static let instance = Cache()

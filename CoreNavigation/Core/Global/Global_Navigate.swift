@@ -1,3 +1,5 @@
+import UIKit
+
 @discardableResult public func Navigate<BuildableType: Buildable>(_ navigationType: Navigation.Direction.Forward, _ to: (Navigation.To<BuildableType>) -> BuildableType) -> Navigation.Operation {
     Navigator(configuration: to(Navigation.To(navigationType: navigationType, queue: queue)).configuration).navigate()
 }

@@ -1,3 +1,5 @@
+import UIKit
+
 public protocol AnyDestination {
     static func resolveDestination(parameters: [String: Any]?, uri: String, pattern: String, destination: @escaping (Self) -> Void, failure: @escaping (Error) -> Void) throws
     func resolveRouting(with resolver: Resolver<Routing.Destination>) throws

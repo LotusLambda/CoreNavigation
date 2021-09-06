@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder {
     public class ViewController<DestinationType: Destination>: Buildable {
         public typealias FromType = UIViewController

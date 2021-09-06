@@ -1,3 +1,5 @@
+import UIKit
+
 extension DataPassing {
     /// Data passing context. Use it to pass data.
     public class Context<DataType> {

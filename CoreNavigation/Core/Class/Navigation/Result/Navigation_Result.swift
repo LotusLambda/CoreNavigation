@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation {
     public class Result<DestinationType: Destination, FromType: UIViewController> {
         public let destination: DestinationType

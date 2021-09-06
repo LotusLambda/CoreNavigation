@@ -1,3 +1,5 @@
+import UIKit
+
 extension Embedding.Embedder {
     class TabBarController: Embeddable {
         let tabBarControllerType: UITabBarController.Type

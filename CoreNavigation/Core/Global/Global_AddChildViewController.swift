@@ -1,3 +1,5 @@
+import UIKit
+
 /// Adds resolved `UIViewController` instance as child view controller to currently presented `UIViewController` using configuration block.
 ///
 /// - Parameter to: Configuration block

@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To {
     @discardableResult public func onViewControllerEvents(_ events: UIViewController.Event<DestinationType.ViewControllerType>...) -> Self {
         queue.sync { configuration.viewControllerEventBlocks.append { events } }

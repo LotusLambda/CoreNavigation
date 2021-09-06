@@ -1,3 +1,5 @@
+import UIKit
+
 public class Configuration<DestinationType: Destination, FromType: UIViewController> {
     typealias OnSuccessBlock = (Navigation.Result<DestinationType, FromType>) -> Void
     typealias OnCompletionBlock = (Navigation.Result<DestinationType, FromType>) -> Void

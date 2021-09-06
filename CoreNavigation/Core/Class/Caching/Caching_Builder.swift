@@ -1,3 +1,5 @@
+import UIKit
+
 extension Caching {
     class Builder: Cacheable {
         let block: (Caching.Context) -> Void

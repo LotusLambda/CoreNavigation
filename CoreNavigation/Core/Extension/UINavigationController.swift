@@ -1,3 +1,5 @@
+import UIKit
+
 extension UINavigationController {
     private func doAfterAnimatingTransition(animated: Bool, completion: (() -> Void)?) {
         guard let completion = completion else {

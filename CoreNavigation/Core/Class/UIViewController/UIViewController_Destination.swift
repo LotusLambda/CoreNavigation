@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
     final public class Destination<ViewControllerType: UIViewController>: CoreNavigation.Destination {
         let block: () -> ViewControllerType

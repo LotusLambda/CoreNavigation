@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To {
     @discardableResult public func transitioningDelegate(_ transitioningDelegate: UIViewControllerTransitioningDelegate) -> Self {
         queue.sync { configuration.transitioningDelegateBlock = { transitioningDelegate } }

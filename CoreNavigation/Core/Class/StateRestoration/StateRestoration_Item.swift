@@ -1,3 +1,5 @@
+import UIKit
+
 extension StateRestoration {
     @objc(StateRestorationItem)
     class Item: NSObject, NSCoding {

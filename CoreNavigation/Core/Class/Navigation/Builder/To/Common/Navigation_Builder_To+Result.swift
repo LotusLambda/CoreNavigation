@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To {
     @discardableResult public func `catch`(_ block: @escaping (Error) -> Void) -> Self {
         queue.sync { configuration.onFailureBlocks.append(block) }

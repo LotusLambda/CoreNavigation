@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.Back {
     @discardableResult public func passDataToViewController<ViewControllerType: UIViewController & DataReceivable>(ofType viewControllerType: ViewControllerType.Type, data: ViewControllerType.DataType) -> Self {
         queue.sync {

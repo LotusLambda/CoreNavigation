@@ -1,3 +1,5 @@
+import UIKit
+
 extension Caching {
     /// Caching context. Use it to invalidate cache.
     public class Context {

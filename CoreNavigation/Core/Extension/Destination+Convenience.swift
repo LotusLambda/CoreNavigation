@@ -1,3 +1,5 @@
+import UIKit
+
 extension Destination {
     public func navigate<BuildableType: Buildable>(_ navigationType: Navigation.Direction.Forward, _ to: (BuildableType) -> BuildableType) -> Navigation.Operation where BuildableType.DestinationType == Self {
         Navigate(navigationType, { to($0.to(self)) })

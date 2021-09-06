@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.Back {
     @discardableResult public func delay(_ block: @escaping () -> TimeInterval) -> Self {
         queue.sync { configuration.delayBlock = block }

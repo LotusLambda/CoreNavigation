@@ -1,3 +1,5 @@
+import UIKit
+
 extension Embedding.Embedder {
     class NavigationController: Embeddable {
         let navigationControllerType: UINavigationController.Type

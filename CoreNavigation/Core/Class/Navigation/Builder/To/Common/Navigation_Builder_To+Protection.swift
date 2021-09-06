@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To {
     @discardableResult public func protect(with protections: Protectable...) -> Self {
         queue.sync { configuration.protections.append(contentsOf: protections) }

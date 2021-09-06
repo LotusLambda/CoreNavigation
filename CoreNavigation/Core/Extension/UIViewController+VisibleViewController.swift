@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
 
     /// Returns the current application's top most view controller.

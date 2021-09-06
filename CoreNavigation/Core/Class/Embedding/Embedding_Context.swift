@@ -1,3 +1,5 @@
+import UIKit
+
 extension Embedding {
     /// Embedding context. Use it to embed given view controller.
     public class Context {

@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigator {
     func childViewController(operation: Navigation.Operation, destination: DestinationType, viewController: DestinationType.ViewControllerType, embeddingViewController: UIViewController?) {
         DispatchQueue.main.async {

@@ -1,3 +1,5 @@
+import UIKit
+
 extension Matchable {
     public func viewController() throws -> UIViewController {
         try Routing.Destination(route: self).viewController()

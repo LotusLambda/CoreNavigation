@@ -1,3 +1,5 @@
+import UIKit
+
 extension Routing {
     final public class Destination: CoreNavigation.Destination, DataReceivable {
         public typealias ViewControllerType = UIViewController

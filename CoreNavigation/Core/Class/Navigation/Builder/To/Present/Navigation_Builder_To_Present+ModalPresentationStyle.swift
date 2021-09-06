@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To.Present {
     @discardableResult public func modalPresentationStyle(_ block: @escaping () -> UIModalPresentationStyle) -> Self {
         queue.sync { configuration.modalPresentationStyleBlock = block }

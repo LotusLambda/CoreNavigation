@@ -1,3 +1,5 @@
+import UIKit
+
 /// Pops visible `UIViewController` instance from currently presented `UINavigationController`.
 ///
 /// - Parameters:

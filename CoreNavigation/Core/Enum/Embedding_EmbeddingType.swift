@@ -1,3 +1,5 @@
+import UIKit
+
 extension Embedding {
     public indirect enum EmbeddingType {
         case navigationController(UINavigationController.Type, () -> EmbeddingType)

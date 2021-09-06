@@ -1,3 +1,5 @@
+import UIKit
+
 public protocol Destination: AnyDestination {
     associatedtype ViewControllerType: UIViewController
 

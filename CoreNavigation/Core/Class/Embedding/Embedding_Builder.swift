@@ -1,3 +1,5 @@
+import UIKit
+
 extension Embedding {
     class Builder: Embeddable {
         let block: (Embedding.Context) -> Void

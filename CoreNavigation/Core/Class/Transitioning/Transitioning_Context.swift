@@ -1,3 +1,5 @@
+import UIKit
+
 extension Transitioning {
     public class Context<FromViewControllerType: UIViewController, ToViewControllerType: UIViewController> {
         public let fromViewController: FromViewControllerType

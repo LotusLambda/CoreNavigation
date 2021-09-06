@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder {
     public class Back<FromViewControllerType: UIViewController, ToViewControllerType: UIViewController>: Buildable {
         public let configuration: Configuration<UIViewController.Destination<UIViewController>.None, FromViewControllerType>

@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation {
     public class Segue<BuildableType: Buildable> {
         private let queue: DispatchQueue

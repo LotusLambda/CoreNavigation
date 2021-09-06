@@ -1,3 +1,5 @@
+import UIKit
+
 /// Closes visible `UIViewController` instance with given navigation type.
 ///
 /// - Parameters:

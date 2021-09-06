@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
     public enum Event<ViewControllerType: UIViewController> {
         case loadView((_ viewController: ViewControllerType) -> Void)

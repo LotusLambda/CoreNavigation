@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To where DestinationType: DataReceivable {
     @discardableResult public func passData(_ data: DestinationType.DataType) -> Self {
         queue.sync { configuration.dataPassingBlock = { $0.passData(data) } }

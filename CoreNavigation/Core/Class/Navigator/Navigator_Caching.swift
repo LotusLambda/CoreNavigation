@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigator {
     func resolveFromCache<DestinationType: Destination>(
         _ destination: DestinationType,

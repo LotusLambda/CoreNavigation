@@ -1,3 +1,5 @@
+import UIKit
+
 /// Presents resolved `UIViewController` instance on currently presented `UIViewController` using configuration block.
 ///
 /// - Parameter to: Navigation configuration block

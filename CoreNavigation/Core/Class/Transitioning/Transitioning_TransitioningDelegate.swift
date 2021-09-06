@@ -1,3 +1,5 @@
+import UIKit
+
 extension Transitioning {
     class Delegate<FromViewControllerType: UIViewController, ToViewControllerType: UIViewController>: NSObject, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
         let transitionDuration: TimeInterval

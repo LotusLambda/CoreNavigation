@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
     class Observer {
         var loadViewBlocks: [(UIViewController) -> Void] = []

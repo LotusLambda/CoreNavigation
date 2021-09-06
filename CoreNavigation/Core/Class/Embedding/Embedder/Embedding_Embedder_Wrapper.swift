@@ -1,3 +1,5 @@
+import UIKit
+
 extension Embedding.Embedder {
     class Wrapper: Embeddable {
         let rootEmbeddable: Embeddable

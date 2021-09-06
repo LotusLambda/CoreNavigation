@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation {
     public class ViewController<BuildableType: Buildable> {
         private let queue: DispatchQueue

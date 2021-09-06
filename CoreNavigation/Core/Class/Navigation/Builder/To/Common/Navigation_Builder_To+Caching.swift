@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To {
     @discardableResult public func cache(cacheIdentifier: String, cacheable: Cacheable) -> Self {
         queue.sync { configuration.cachingBlock = { (cacheIdentifier, cacheable) } }

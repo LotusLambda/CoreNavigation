@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To {
     @discardableResult public func embed(inside embeddingType: Embedding.EmbeddingType) -> Self {
         queue.sync { configuration.embeddable = embeddingType.embeddable() }

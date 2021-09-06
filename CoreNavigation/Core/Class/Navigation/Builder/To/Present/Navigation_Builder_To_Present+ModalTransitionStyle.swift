@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To.Present {
     @discardableResult public func modalTransitionStyle(_ block: @escaping () -> UIModalTransitionStyle) -> Self {
         queue.sync { configuration.modalTransitionStyleBlock = block }

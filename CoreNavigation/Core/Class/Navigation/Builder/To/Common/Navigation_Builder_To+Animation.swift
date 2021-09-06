@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder.To {
     @discardableResult public func animated(_ block: @escaping () -> Bool) -> Self {
         queue.sync { configuration.isAnimatedBlock = block }

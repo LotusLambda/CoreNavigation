@@ -1,3 +1,5 @@
+import UIKit
+
 @discardableResult public func PerformSegue<FromViewControllerType: UIViewController>(_ segue: (Navigation.Segue<Navigation.Builder.Segue<FromViewControllerType>>) -> Navigation.Builder.Segue<FromViewControllerType>) -> Navigation.Operation {
     Navigator(configuration: segue(Navigation.Segue(queue: queue)).configuration).navigate()
 }

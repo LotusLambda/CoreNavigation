@@ -1,3 +1,5 @@
+import UIKit
+
 extension Navigation.Builder {
     public class To<DestinationType: Destination, FromType: UIViewController>: Buildable {
         public let configuration: Configuration<DestinationType, FromType>
