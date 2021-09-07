@@ -18,20 +18,20 @@ extension Navigation {
             to({ destination }, from: sourceViewController)
         }
 
-        @discardableResult public func to<FromType: UIViewController>(_ route: Matchable, from sourceViewController: BuildableType.FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == Routing.Destination, BuildableType.FromType == FromType {
-            to(Routing.Destination(route: route), from: sourceViewController)
+        @discardableResult public func to<FromType: UIViewController>(_ route: Matchable, from sourceViewController: BuildableType.FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == Routing.RoutingDestination, BuildableType.FromType == FromType {
+            to(Routing.RoutingDestination(route: route), from: sourceViewController)
         }
 
-        @discardableResult public func to<ViewControllerType: UIViewController, FromType: UIViewController>(_ viewController: ViewControllerType, from sourceViewController: FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == UIViewController.Destination<ViewControllerType>, BuildableType.FromType == FromType {
-            to(UIViewController.Destination(block: { viewController }), from: sourceViewController)
+        @discardableResult public func to<ViewControllerType: UIViewController, FromType: UIViewController>(_ viewController: ViewControllerType, from sourceViewController: FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == UIViewController.ViewControllerDestination<ViewControllerType>, BuildableType.FromType == FromType {
+            to(UIViewController.ViewControllerDestination(block: { viewController }), from: sourceViewController)
         }
 
-        @discardableResult public func to<ViewControllerType: UIViewController, FromType: UIViewController>(_ viewControllerType: ViewControllerType.Type, from sourceViewController: FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == UIViewController.Destination<ViewControllerType>, BuildableType.FromType == FromType {
-            to(UIViewController.Destination(block: { viewControllerType.init() }), from: sourceViewController)
+        @discardableResult public func to<ViewControllerType: UIViewController, FromType: UIViewController>(_ viewControllerType: ViewControllerType.Type, from sourceViewController: FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == UIViewController.ViewControllerDestination<ViewControllerType>, BuildableType.FromType == FromType {
+            to(UIViewController.ViewControllerDestination(block: { viewControllerType.init() }), from: sourceViewController)
         }
 
-        @discardableResult public func to<ViewControllerType: UIViewController, FromType: UIViewController>(_ block: @escaping () -> ViewControllerType, from sourceViewController: FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == UIViewController.Destination<ViewControllerType>, BuildableType.FromType == FromType {
-            to(UIViewController.Destination(block: block), from: sourceViewController)
+        @discardableResult public func to<ViewControllerType: UIViewController, FromType: UIViewController>(_ block: @escaping () -> ViewControllerType, from sourceViewController: FromType = UIViewController.visibleViewController()) -> BuildableType where BuildableType.DestinationType == UIViewController.ViewControllerDestination<ViewControllerType>, BuildableType.FromType == FromType {
+            to(UIViewController.ViewControllerDestination(block: block), from: sourceViewController)
         }
     }
 

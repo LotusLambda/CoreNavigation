@@ -20,7 +20,7 @@ extension Navigation.Builder.To {
     }
 }
 
-extension Navigation.Builder.To where DestinationType: Routing.Destination {
+extension Navigation.Builder.To where DestinationType: Routing.RoutingDestination {
     @discardableResult public func cache(with cacheable: Cacheable) -> Self {
         cache(cacheIdentifier: configuration.destination.route.uri, cacheable: cacheable)
     }

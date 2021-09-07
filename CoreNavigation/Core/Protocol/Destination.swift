@@ -27,7 +27,7 @@ extension Destination {
         // empty implementation, never gonna happen if destination conforms to Routable
     }
 
-    public func resolveRouting(with resolver: Resolver<Routing.Destination>) throws {
+    public func resolveRouting(with resolver: Resolver<Routing.RoutingDestination>) throws {
         // empty implementation, never gonna happen if destination conforms to Routable
     }
     
@@ -51,7 +51,7 @@ extension Destination where Self: Routable {
         
     }
 
-    public func resolveRouting(with resolver: Resolver<Routing.Destination>) throws {
+    public func resolveRouting(with resolver: Resolver<Routing.RoutingDestination>) throws {
         resolve(with: Resolver<Self>.init(onCompleteBlock: resolver.onCompleteBlock, onCancelBlock: resolver.onCancelBlock))
     }
 }

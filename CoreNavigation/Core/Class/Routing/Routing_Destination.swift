@@ -1,7 +1,7 @@
 import UIKit
 
 extension Routing {
-    final public class Destination: CoreNavigation.Destination, DataReceivable {
+    final public class RoutingDestination: Destination, DataReceivable {
         public typealias ViewControllerType = UIViewController
         public typealias DataType = Any?
 
@@ -19,7 +19,7 @@ extension Routing {
             }
         }
 
-        public func resolve(with resolver: Resolver<Routing.Destination>) {
+        public func resolve(with resolver: Resolver<Routing.RoutingDestination>) {
             guard let match = Router.instance.match(for: route) else {
                 resolver.cancel(with: Navigation.Error.routeNotFound)
                 return

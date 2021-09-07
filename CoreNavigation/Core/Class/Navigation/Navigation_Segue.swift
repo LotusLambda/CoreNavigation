@@ -11,11 +11,11 @@ extension Navigation {
         public func segue<FromViewControllerType: UIViewController>(
             identifier: String,
             from sourceViewController: FromViewControllerType = UIViewController.visibleViewController()
-        ) -> BuildableType where BuildableType.DestinationType == UIViewController.Destination<UIViewController>.None, BuildableType.FromType == FromViewControllerType {
+        ) -> BuildableType where BuildableType.DestinationType == UIViewController.ViewControllerDestination<UIViewController>.None, BuildableType.FromType == FromViewControllerType {
             BuildableType.init(
                 configuration: Configuration(
                     directive: .direction(.segue(identifier)),
-                    toBlock: { UIViewController.Destination<UIViewController>.None() },
+                    toBlock: { UIViewController.ViewControllerDestination<UIViewController>.None() },
                     from: sourceViewController),
                 queue: queue)
         }

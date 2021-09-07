@@ -13,7 +13,7 @@ import UIKit
 ///   - viewController: An `UIViewController` instance to navigate to
 ///   - animated: A flag indicating whether navigation is animated
 ///   - completion: Completion block
-@discardableResult public func Present<ViewControllerType: UIViewController>(viewController: ViewControllerType, animated: Bool = true, completion: ((Navigation.Result<UIViewController.Destination<ViewControllerType>, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
+@discardableResult public func Present<ViewControllerType: UIViewController>(viewController: ViewControllerType, animated: Bool = true, completion: ((Navigation.Result<UIViewController.ViewControllerDestination<ViewControllerType>, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
     Present { $0
         .to(viewController)
         .animated(animated)
@@ -39,7 +39,7 @@ import UIKit
     }
 }
 
-@discardableResult public func Present(matchable: Matchable, animated: Bool = true, completion: ((Navigation.Result<Routing.Destination, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
+@discardableResult public func Present(matchable: Matchable, animated: Bool = true, completion: ((Navigation.Result<Routing.RoutingDestination, UIViewController>) -> Void)? = nil) -> Navigation.Operation {
     Present { $0
         .to(matchable)
         .animated(animated)
