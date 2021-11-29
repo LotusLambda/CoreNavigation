@@ -23,15 +23,10 @@ class TestPresentViewController: QuickSpec {
             context("UIViewController instance", {
                 Present { $0
                     .to(self.viewController, from: self.canvas.rootViewController)
-                    .passDataToViewController(self.passingData)
                 }
                 
                 it("is presented", closure: {
                     expect(self.viewController.isViewLoaded).toEventually(beTrue())
-                })
-                
-                it("view controller received data", closure: {
-                    expect(self.viewController.receivedData).toEventually(equal(self.passingData))
                 })
             })
         }

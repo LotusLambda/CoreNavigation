@@ -13,7 +13,7 @@ class TestRouteViewController: QuickSpec {
         
         var parameters: [String : Any]?
         
-        init(parameters: [String : Any]?) {
+        init(parameters: [String : Any]?, uri: String, pattern: String) throws {
             self.parameters = parameters
         }
         

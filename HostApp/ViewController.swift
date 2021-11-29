@@ -2,7 +2,11 @@ import UIKit
 import CoreNavigation
 
 final class ViewController: UIViewController, DataReceivable, Routable {
-    init(parameters: [String : Any]?) {
+    func didResolve(viewController: UIViewController) {
+        
+    }
+    
+    init(parameters: [String : Any]?, uri: String, pattern: String) throws {
         print("Init 1 with params", parameters)
         super.init(nibName: nil, bundle: nil)
     }

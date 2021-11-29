@@ -32,7 +32,7 @@ class TestPresentViewControllerCached: QuickSpec {
     }
     
     let canvas = Utilities.TestingCanvas()
-    private var viewController: MockViewController?
+    private var viewController: UIViewController?
     let passingData = "mock-data"
     
     override func spec() {
@@ -40,8 +40,7 @@ class TestPresentViewControllerCached: QuickSpec {
             context("cached UIViewController instance", {
                 func present(onComplete: @escaping (UIViewController) -> Void) {
                     Present { $0
-                        .to(MockViewController.self)
-                        .passDataToViewController(self.passingData)
+                        .to(MockViewController.self, from: self.canvas.rootViewController)
                         .cache(cacheIdentifier: "mock-identifier", { (context) in
                             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                                 context.invalidateCache()
@@ -71,11 +70,6 @@ class TestPresentViewControllerCached: QuickSpec {
                 
                 it("appeared twice", closure: {
                     expect(MockViewController.appearCount).toEventually(equal(2))
-                })
-                
-                it("received correct data twice", closure: {
-                    expect(self.viewController?.receivedData).toEventually(equal(self.passingData))
-                    expect(MockViewController.receivedDataCount).toEventually(equal(2))
                 })
             })
         }

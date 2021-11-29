@@ -17,8 +17,8 @@ extension UIViewController {
         case didReceiveMemoryWarning((_ viewController: ViewControllerType) -> Void)
         case applicationFinishedRestoringState((_ viewController: ViewControllerType) -> Void)
 
-        @available(iOS 11.0, *) case viewLayoutMarginsDidChange((_ viewController: ViewControllerType) -> Void)
-        @available(iOS 11.0, *) case viewSafeAreaInsetsDidChange((_ viewController: ViewControllerType) -> Void)
+        case viewLayoutMarginsDidChange((_ viewController: ViewControllerType) -> Void)
+        case viewSafeAreaInsetsDidChange((_ viewController: ViewControllerType) -> Void)
 
         public class Builder {
             let queue: DispatchQueue

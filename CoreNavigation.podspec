@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name = 'CoreNavigation'
-	spec.ios.deployment_target = '8.0'
+	spec.ios.deployment_target = '10.0'
 	spec.version = '2.0.0'
 	spec.license = 'MIT'
 	spec.summary = 'A Swift navigation framework'

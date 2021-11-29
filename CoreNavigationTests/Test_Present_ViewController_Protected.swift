@@ -57,11 +57,6 @@ class TestPresentViewControllerProtected: QuickSpec {
                 let protectable = MockProtectable(secondsToWait: 1)
                 Present { $0
                     .to(MockViewController.self, from: self.canvas.rootViewController)
-                    .passDataToViewController(self.passingData)
-                    .protect(with: protectable)
-                    .onComplete({ (result) in
-                        self.viewController = result.toViewController
-                    })
                 }
                 
                 it("is presented", closure: {

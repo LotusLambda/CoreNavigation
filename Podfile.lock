@@ -1,7 +1,7 @@
 PODS:
-  - Nimble (8.0.1)
-  - Quick (2.1.0)
-  - SwiftLint (0.35.0)
+  - Nimble (9.2.1)
+  - Quick (4.0.0)
+  - SwiftLint (0.44.0)
 
 DEPENDENCIES:
   - Nimble
@@ -15,10 +15,10 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
-  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
-  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
 
-PODFILE CHECKSUM: f2819a1be2bdd24c36c8b3e793976c21aba9183c
+PODFILE CHECKSUM: 4fe2a44f8c34631622aa7babb331d276d16c9581
 
 COCOAPODS: 1.11.0

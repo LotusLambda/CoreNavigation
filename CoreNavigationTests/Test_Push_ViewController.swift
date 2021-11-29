@@ -23,16 +23,11 @@ class TestPushViewController: QuickSpec {
             context("UIViewController instance", {
                 Push { $0
                     .to(self.viewController, from: self.canvas.rootViewController)
-                    .passDataToViewController(self.passingData)
                 }
                 
                 it("is pushed", closure: {
                     expect(self.viewController.isViewLoaded).toEventually(beTrue())
                     expect(self.viewController.navigationController).toEventuallyNot(beNil())
-                })
-                
-                it("view controller received data", closure: {
-                    expect(self.viewController.receivedData).toEventually(equal(self.passingData))
                 })
             })
         }

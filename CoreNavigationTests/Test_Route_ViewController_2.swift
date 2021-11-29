@@ -5,11 +5,15 @@ import CoreNavigation
 
 class TestRouteViewController2: QuickSpec {
     final class MockViewController: UIViewController, Routable {
+        func didResolve(viewController: UIViewController) {
+            
+        }
+        
         static func routePatterns() -> [String] {
             ["http://example.com/TestRouteViewController2/:parameter1/:parameter2"]
         }
         
-        required init(parameters: [String : Any]?) {
+        required init(parameters: [String : Any]?, uri: String, pattern: String) throws {
             self.parameters = parameters
             super.init(nibName: nil, bundle: nil)
         }

@@ -16,7 +16,7 @@ class TestPresentViewControllerTransitioningDelegate: QuickSpec {
                 
                 Present { $0
                     .to(self.viewController, from: self.canvas.rootViewController)
-                    .transition(with: 0.3, { (context) in
+                    .transition(with: 0.3, presentationControllerClass: nil, { (context) in
                         didTransition = true
                     })
                 }
